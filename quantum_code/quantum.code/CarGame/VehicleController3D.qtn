@@ -1,0 +1,6 @@
+//asset PlatformControllerConfig;
+
+component VehicleController3D
+{
+    //asset_ref<PlatformControllerConfig> Config;
+}
