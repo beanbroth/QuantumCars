@@ -86,6 +86,7 @@ MonoBehaviour:
     MapEntities: []
   Prototypes:
   - PlayerLink: []
+    VehicleController3D: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -177,37 +178,58 @@ MonoBehaviour:
     PhysicsJoints2D: []
     PhysicsJoints3D: []
   - PlayerLink: []
+    VehicleController3D:
+    - _empty_prototype_dummy_field_: 0
     CharacterController2D: []
-    CharacterController3D:
-    - Config:
-        Id:
-          Value: 4
+    CharacterController3D: []
     NavMeshAvoidanceAgent: []
     NavMeshAvoidanceObstacle: []
     NavMeshPathfinder: []
     NavMeshSteeringAgent: []
     PhysicsBody2D: []
-    PhysicsBody3D: []
+    PhysicsBody3D:
+    - Version: 2
+      Config:
+        Value: 58
+      Mass:
+        RawValue: 655360
+      Drag:
+        RawValue: 32768
+      AngularDrag:
+        RawValue: 32768
+      CenterOfMass:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      RotationFreeze:
+        Value: 0
+      GravityScale:
+        _hasValue: 0
+        _value:
+          RawValue: 65536
     PhysicsCollider2D: []
     PhysicsCollider3D:
     - ShapeConfig:
-        ShapeType: 1
+        ShapeType: 2
         SphereRadius:
           RawValue: 32768
         PositionOffset:
           X:
             RawValue: 0
           Y:
-            RawValue: 32768
+            RawValue: 0
           Z:
             RawValue: 0
         BoxExtents:
           X:
-            RawValue: 0
+            RawValue: 32768
           Y:
-            RawValue: 0
+            RawValue: 32768
           Z:
-            RawValue: 0
+            RawValue: 32768
         RotationOffset:
           X:
             RawValue: 0
@@ -218,7 +240,7 @@ MonoBehaviour:
         UserTag: 0
         IsPersistent: 1
         CompoundShapes: []
-        IsSetFromSourceCollider: 0
+        IsSetFromSourceCollider: 1
       Layer: 0
       IsTrigger: 0
       PhysicsMaterial:
@@ -233,18 +255,18 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 209715
+          RawValue: 155320
         Y:
-          RawValue: 151388
+          RawValue: 211681
         Z:
           RawValue: 0
       Rotation:
         X:
-          RawValue: 0
+          RawValue: 2228224
         Y:
           RawValue: 0
         Z:
-          RawValue: 0
+          RawValue: 2228224
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
