@@ -6,6 +6,7 @@ public unsafe class MovementSystem : SystemMainThreadFilter<MovementSystem.Filte
     {
         public EntityRef Entity;
         public VehicleController3D* VehicleController3D;
+        public Transform3D* Transform3D;
         //public PlayerLink* Link;
     }
 

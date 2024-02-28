@@ -179,7 +179,10 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - PlayerLink: []
     VehicleController3D:
-    - _empty_prototype_dummy_field_: 0
+    - Config:
+        Id:
+          Value: 4572399945747127961
+      WheelConfig: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -225,11 +228,11 @@ MonoBehaviour:
             RawValue: 0
         BoxExtents:
           X:
-            RawValue: 32768
+            RawValue: 73728
           Y:
             RawValue: 32768
           Z:
-            RawValue: 32768
+            RawValue: 119468
         RotationOffset:
           X:
             RawValue: 0
@@ -262,11 +265,11 @@ MonoBehaviour:
           RawValue: 0
       Rotation:
         X:
-          RawValue: 2228224
+          RawValue: 0
         Y:
           RawValue: 0
         Z:
-          RawValue: 2228224
+          RawValue: 0
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []

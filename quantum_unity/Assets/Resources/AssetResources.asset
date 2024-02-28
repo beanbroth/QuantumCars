@@ -41,11 +41,11 @@ MonoBehaviour:
         Id:
           Value: 5
       ResourcePath: DB/Configs/SimulationConfig
-    - Path: Resources/DB/CharacterControllerEntity|EntityView
+    - Path: Resources/DB/VehicleControllerEntity|EntityView
       AssetRef:
         Id:
           Value: 745656404416517766
-      ResourcePath: DB/CharacterControllerEntity
+      ResourcePath: DB/VehicleControllerEntity
     - Path: Resources/DB/Map1_mesh
       AssetRef:
         Id:
@@ -56,8 +56,18 @@ MonoBehaviour:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/Map1
-    - Path: Resources/DB/CharacterControllerEntity|EntityPrototype
+    - Path: Resources/DB/VehicleControllerEntity|EntityPrototype
       AssetRef:
         Id:
           Value: 2713639564366554777
-      ResourcePath: DB/CharacterControllerEntity
+      ResourcePath: DB/VehicleControllerEntity
+    - Path: Resources/DB/Configs/DefaultWheelConfig
+      AssetRef:
+        Id:
+          Value: 4200002946736381701
+      ResourcePath: DB/Configs/DefaultWheelConfig
+    - Path: Resources/DB/Configs/DefaultVehicleControllerConfig
+      AssetRef:
+        Id:
+          Value: 4572399945747127961
+      ResourcePath: DB/Configs/DefaultVehicleControllerConfig

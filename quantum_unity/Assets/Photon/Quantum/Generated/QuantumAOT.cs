@@ -20,6 +20,7 @@ public class QuantumAOT {
 
   public List<Photon.Deterministic.DeterministicTickInputSet> DeterministicTickInputSet;
   public List<Photon.Deterministic.FPVector2> FPVector2;
+  public List<Photon.Deterministic.FPVector3> FPVector3;
   public List<Quantum.AssetRefNavMesh> AssetRefNavMesh;
   public List<Quantum.Core.FrameBase.EntitiesConfig.ComponentBufferConfig> ComponentBufferConfig;
   public List<Quantum.MapStaticCollider2D> MapStaticCollider2D;

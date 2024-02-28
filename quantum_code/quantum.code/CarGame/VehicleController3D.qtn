@@ -1,6 +1,8 @@
-//asset PlatformControllerConfig;
+asset WheelControllerConfig;
+asset VehicleController3DConfig;
 
 component VehicleController3D
 {
-    //asset_ref<PlatformControllerConfig> Config;
+    asset_ref<VehicleController3DConfig> RigConfig;
+    list< asset_ref<WheelControllerConfig>> WheelConfigs;
 }

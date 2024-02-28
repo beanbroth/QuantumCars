@@ -75,6 +75,8 @@
     <Compile Include="CarGame\MovementSystem.cs" />
     <Compile Include="CarGame\PlayerSpawnSystem.cs" />
     <Compile Include="CarGame\VehicleController3D.cs" />
+    <Compile Include="CarGame\VehicleController3DConfig.cs" />
+    <Compile Include="CarGame\WheelControllerConfig.cs" />
     <Compile Include="CommandSetup.User.cs" />
     <Compile Include="Core\CodeGen.cs" />
     <Compile Include="CommandSetup.Legacy.cs" />
