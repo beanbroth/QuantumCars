@@ -17,5 +17,76 @@ MonoBehaviour:
       Path: Resources/DB/Configs/DefaultWheelConfig
       Guid:
         Value: 4200002946736381701
-    position:
-      RawValue: 0
+    springStrength:
+      RawValue: 655360000
+    springDamper:
+      RawValue: 65536000
+    tireGripFactor:
+      Samples:
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      PreWrapMode: 0
+      PostWrapMode: 0
+      StartTime:
+        RawValue: 0
+      EndTime:
+        RawValue: 65536
+      Resolution: 32
+      OriginalPreWrapMode: 8
+      OriginalPostWrapMode: 8
+      Keys:
+      - Time:
+          RawValue: 0
+        Value:
+          RawValue: 65536
+        InTangent:
+          RawValue: 0
+        OutTangent:
+          RawValue: 0
+        TangentMode: 0
+        TangentModeLeft: 1
+        TangentModeRight: 1
+      - Time:
+          RawValue: 65536
+        Value:
+          RawValue: 65536
+        InTangent:
+          RawValue: 0
+        OutTangent:
+          RawValue: 0
+        TangentMode: 0
+        TangentModeLeft: 1
+        TangentModeRight: 1
+    tireMass:
+      RawValue: 65536

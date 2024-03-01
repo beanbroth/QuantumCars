@@ -19,12 +19,15 @@ public class QuantumAOT {
 #pragma warning restore IDE0051 // Remove unused private members
 
   public List<Photon.Deterministic.DeterministicTickInputSet> DeterministicTickInputSet;
+  public List<Photon.Deterministic.FP> FP;
   public List<Photon.Deterministic.FPVector2> FPVector2;
   public List<Photon.Deterministic.FPVector3> FPVector3;
   public List<Quantum.AssetRefNavMesh> AssetRefNavMesh;
   public List<Quantum.Core.FrameBase.EntitiesConfig.ComponentBufferConfig> ComponentBufferConfig;
+  public List<Quantum.FPAnimationCurve.Keyframe> Keyframe;
   public List<Quantum.MapStaticCollider2D> MapStaticCollider2D;
   public List<Quantum.MapStaticCollider3D> MapStaticCollider3D;
+  public List<System.Boolean> Boolean;
   public List<System.Byte> Byte;
   public List<System.Int32> Int32;
 }

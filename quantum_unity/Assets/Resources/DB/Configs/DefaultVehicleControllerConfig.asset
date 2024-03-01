@@ -19,7 +19,7 @@ MonoBehaviour:
         Value: 4572399945747127961
     numWheels: 4
     rideHeight:
-      RawValue: 382730
+      RawValue: 62259
     wheelLocalPositions:
     - X:
         RawValue: -75366
@@ -38,10 +38,85 @@ MonoBehaviour:
       Y:
         RawValue: -42598
       Z:
-        RawValue: -111411
+        RawValue: -65536
     - X:
         RawValue: 75366
       Y:
         RawValue: -42598
       Z:
-        RawValue: -111411
+        RawValue: -65536
+    wheelIsSteering: 01010000
+    wheelIsPowered: 01010101
+    maxSteerAngle:
+      RawValue: 1966080
+    maxTorque:
+      RawValue: 19660800
+    maxSpeed:
+      RawValue: 6553600
+    speedTorqueCurve:
+      Samples:
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      - RawValue: 65536
+      PreWrapMode: 0
+      PostWrapMode: 0
+      StartTime:
+        RawValue: 0
+      EndTime:
+        RawValue: 65536
+      Resolution: 32
+      OriginalPreWrapMode: 8
+      OriginalPostWrapMode: 8
+      Keys:
+      - Time:
+          RawValue: 0
+        Value:
+          RawValue: 65536
+        InTangent:
+          RawValue: 0
+        OutTangent:
+          RawValue: 0
+        TangentMode: 0
+        TangentModeLeft: 1
+        TangentModeRight: 1
+      - Time:
+          RawValue: 65536
+        Value:
+          RawValue: 65536
+        InTangent:
+          RawValue: 0
+        OutTangent:
+          RawValue: 0
+        TangentMode: 0
+        TangentModeLeft: 1
+        TangentModeRight: 1

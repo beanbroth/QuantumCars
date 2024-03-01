@@ -99,7 +99,7 @@ MonoBehaviour:
       Config:
         Value: 58
       Mass:
-        RawValue: 65536
+        RawValue: 1966080
       Drag:
         RawValue: 32768
       AngularDrag:
@@ -162,11 +162,11 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 0
+          RawValue: -96337
         Y:
-          RawValue: 304742
+          RawValue: 634388
         Z:
-          RawValue: 0
+          RawValue: -12451
       Rotation:
         X:
           RawValue: 2949120
@@ -179,10 +179,24 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - PlayerLink: []
     VehicleController3D:
-    - Config:
+    - RigConfig:
         Id:
           Value: 4572399945747127961
-      WheelConfig: []
+      WheelConfigs:
+      - Id:
+          Value: 4200002946736381701
+      - Id:
+          Value: 4200002946736381701
+      - Id:
+          Value: 4200002946736381701
+      - Id:
+          Value: 4200002946736381701
+      Throttle:
+        RawValue: 0
+      Velocity:
+        RawValue: 0
+      SteeringAngle:
+        RawValue: 0
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -195,7 +209,7 @@ MonoBehaviour:
       Config:
         Value: 58
       Mass:
-        RawValue: 655360
+        RawValue: 6553600
       Drag:
         RawValue: 32768
       AngularDrag:
@@ -258,7 +272,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 155320
+          RawValue: 1090519
         Y:
           RawValue: 211681
         Z:
