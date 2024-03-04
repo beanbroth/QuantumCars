@@ -51,16 +51,31 @@ MonoBehaviour:
         Id:
           Value: 1090595483060781529
       ResourcePath: DB/Map1_mesh
+    - Path: Resources/DB/Configs/DefaultGameConfig
+      AssetRef:
+        Id:
+          Value: 1447335239002490440
+      ResourcePath: DB/Configs/DefaultGameConfig
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/Map1
+    - Path: Resources/DB/SpawnPointEntity|EntityView
+      AssetRef:
+        Id:
+          Value: 2529128957139690781
+      ResourcePath: DB/SpawnPointEntity
     - Path: Resources/DB/VehicleControllerEntity|EntityPrototype
       AssetRef:
         Id:
           Value: 2713639564366554777
       ResourcePath: DB/VehicleControllerEntity
+    - Path: Resources/DB/SpawnPointEntity|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 2917796873225125946
+      ResourcePath: DB/SpawnPointEntity
     - Path: Resources/DB/Configs/DefaultWheelConfig
       AssetRef:
         Id:

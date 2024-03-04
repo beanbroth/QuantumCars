@@ -8,6 +8,13 @@ namespace Quantum.Editor {
   using UnityEngine;
   using UnityEditor;
 
+  [CustomPropertyDrawer(typeof(AssetRefGameConfig))]
+  public class AssetRefGameConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(GameConfigAsset));
+    }
+  }
+
   [CustomPropertyDrawer(typeof(AssetRefVehicleController3DConfig))]
   public class AssetRefVehicleController3DConfigPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
@@ -22,6 +29,7 @@ namespace Quantum.Editor {
     }
   }
 
+  [CustomPropertyDrawer(typeof(Quantum.Prototypes.GameState_Prototype))]
   [CustomPropertyDrawer(typeof(Quantum.Prototypes.InputButtons_Prototype))]
   partial class PrototypeDrawer {}
 }

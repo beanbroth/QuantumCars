@@ -1,0 +1,6 @@
+synced event OnGameStateChanged
+{
+    GameState NewState;
+}
+
+signal OnGameStateChanged(GameState NewState);

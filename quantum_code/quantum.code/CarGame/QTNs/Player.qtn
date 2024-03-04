@@ -1,0 +1,19 @@
+asset WheelControllerConfig;
+asset VehicleController3DConfig;
+
+component VehicleController3D
+{
+    asset_ref<VehicleController3DConfig> RigConfig;
+    list<asset_ref<WheelControllerConfig>> WheelConfigs;
+    
+    //runtime data
+
+    [ReadOnly]  FP Throttle;
+    [ReadOnly] FP Velocity;
+    [ReadOnly] FP SteeringAngle;
+}
+
+component PlayerLink
+{
+    player_ref Player;
+}

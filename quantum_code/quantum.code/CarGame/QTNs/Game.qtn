@@ -1,0 +1,18 @@
+asset GameConfig;
+
+enum GameState
+{
+GameRunning,
+GameSetup,
+GameEnd
+}
+
+singleton component GameSessionManager 
+{
+    GameState CurrentGameState;
+}
+
+component SpawnPoint
+{
+    bool hasSpawnedFlag;
+}

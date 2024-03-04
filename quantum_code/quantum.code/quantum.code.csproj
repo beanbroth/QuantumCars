@@ -72,11 +72,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarGame\MovementSystem.cs" />
-    <Compile Include="CarGame\PlayerSpawnSystem.cs" />
-    <Compile Include="CarGame\VehicleController3D.cs" />
-    <Compile Include="CarGame\VehicleController3DConfig.cs" />
-    <Compile Include="CarGame\WheelControllerConfig.cs" />
+    <Compile Include="CarGame\AssetsAndConfigs\GameConfig.cs" />
+    <Compile Include="CarGame\AssetsAndConfigs\VehicleController3DConfig.cs" />
+    <Compile Include="CarGame\AssetsAndConfigs\WheelControllerConfig.cs" />
+    <Compile Include="CarGame\ConfigAssetsHelper.cs" />
+    <Compile Include="CarGame\SpawnSystem.cs" />
+    <Compile Include="CarGame\GameSessionManager.cs" />
+    <Compile Include="CarGame\Systems\GameSessionSystem.cs" />
+    <Compile Include="CarGame\Systems\MovementSystem.cs" />
+    <Compile Include="CarGame\Systems\PlayerSpawnSystem.cs" />
+    <Compile Include="CarGame\Vehicle\VehicleController3D.cs" />
     <Compile Include="CommandSetup.User.cs" />
     <Compile Include="Core\CodeGen.cs" />
     <Compile Include="CommandSetup.Legacy.cs" />
@@ -93,9 +98,11 @@
     <EmbeddedResource Include="db.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CarGame\Input.qtn" />
-    <Content Include="CarGame\PlayerLink.qtn" />
-    <Content Include="CarGame\VehicleController3D.qtn" />
+    <Content Include="CarGame\QTNs\Constants.qtn" />
+    <Content Include="CarGame\QTNs\Events.qtn" />
+    <Content Include="CarGame\QTNs\Game.qtn" />
+    <Content Include="CarGame\QTNs\Input.qtn" />
+    <Content Include="CarGame\QTNs\Player.qtn" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
