@@ -4,6 +4,7 @@ namespace Quantum;
 
 public unsafe partial struct GameSessionManager : IComponent
 {
+    
     public void ChangeGameState(Frame f, GameState newState)
     {
         CurrentGameState = newState;

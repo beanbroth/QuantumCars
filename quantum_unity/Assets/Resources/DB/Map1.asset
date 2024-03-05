@@ -296,6 +296,9 @@ MonoBehaviour:
   - GameSessionManager:
     - CurrentGameState:
         Value: 1
+      fallbackGameConfig:
+        Id:
+          Value: 1447335239002490440
     PlayerLink: []
     SpawnPoint: []
     VehicleController3D: []

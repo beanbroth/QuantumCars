@@ -10,6 +10,7 @@ GameEnd
 singleton component GameSessionManager 
 {
     GameState CurrentGameState;
+    asset_ref<GameConfig> fallbackGameConfig;
 }
 
 component SpawnPoint

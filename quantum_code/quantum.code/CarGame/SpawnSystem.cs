@@ -11,52 +11,72 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged
         base.OnInit(f);
     }
 
-    private static void MoveEntityToValidSpawnPoint(Frame f, EntityRef entityRef, ref bool hasBeenPlaced)
+    private static void MoveEntityToValidSpawnPoint(Frame f, EntityRef entityRef)
     {
         var spawnsFilter = f.Filter<Transform3D, SpawnPoint>();
         Transform3D* entityTransform = f.Unsafe.GetPointer<Transform3D>(entityRef);
-        Transform3D* fallbackSpawnTransform = null;
-        SpawnPoint* fallbackSpawnPoint = null;
+
+        // Variables for the first pass
+        bool foundUnspawned = false;
+        int spawnCount = 0;
+        Transform3D* selectedSpawnTransform = null;
+        SpawnPoint* selectedSpawnPoint = null;
+
+        // First pass: Check for unspawned spawn points and count total spawn points
         while (spawnsFilter.NextUnsafe(out var _, out var spawnTransform, out var spawnPoint))
         {
-            if (fallbackSpawnTransform == null)
-            {
-                fallbackSpawnTransform = spawnTransform;
-                fallbackSpawnPoint = spawnPoint;
-            }
-
-            if (!hasBeenPlaced && spawnPoint->hasSpawnedFlag == false)
+            if (spawnPoint->hasSpawnedFlag == false)
             {
                 entityTransform->Position = spawnTransform->Position;
                 entityTransform->Rotation = spawnTransform->Rotation;
                 spawnPoint->hasSpawnedFlag = true;
-                hasBeenPlaced = true;
-                break;
+                return;
             }
+
+            spawnCount++;
         }
 
-        if (!hasBeenPlaced && fallbackSpawnTransform != null)
+        // If no unspawned spawn points were found, proceed to randomly select one
+        if (!foundUnspawned && spawnCount > 0)
         {
-            entityTransform->Position = fallbackSpawnTransform->Position;
-            entityTransform->Rotation = fallbackSpawnTransform->Rotation;
-            if (fallbackSpawnPoint != null)
+            int randomIndex = new Random().Next(spawnCount);
+            int currentIndex = 0;
+            spawnsFilter = f.Filter<Transform3D, SpawnPoint>(); // Reset filter to iterate again
+
+            // Second pass: Select a random spawn point
+            while (spawnsFilter.NextUnsafe(out var _, out var spawnTransform, out var spawnPoint))
             {
-                fallbackSpawnPoint->hasSpawnedFlag = true;
+                if (currentIndex == randomIndex)
+                {
+                    selectedSpawnTransform = spawnTransform;
+                    selectedSpawnPoint = spawnPoint;
+                    break;
+                }
+
+                currentIndex++;
+            }
+
+            if (selectedSpawnTransform != null)
+            {
+                entityTransform->Position = selectedSpawnTransform->Position;
+                entityTransform->Rotation = selectedSpawnTransform->Rotation;
+                if (selectedSpawnPoint != null)
+                {
+                    selectedSpawnPoint->hasSpawnedFlag = true;
+                }
             }
         }
     }
 
     public static void RepositionEntity(Frame f, EntityRef entityToReposition)
     {
-        bool hasRepositioned = false;
-        MoveEntityToValidSpawnPoint(f, entityToReposition, ref hasRepositioned);
+        MoveEntityToValidSpawnPoint(f, entityToReposition);
     }
 
     public static EntityRef SpawnFromPrototype(Frame f, EntityPrototype prototype)
     {
         var spawnedEntityRef = f.Create(prototype);
-        bool hasSpawned = false;
-        MoveEntityToValidSpawnPoint(f, spawnedEntityRef, ref hasSpawned);
+        MoveEntityToValidSpawnPoint(f, spawnedEntityRef);
         return spawnedEntityRef;
     }
 
@@ -78,9 +98,15 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged
     private void SpawnAllAI(Frame frame)
     {
         var aiFilter = frame.Filter<SpawnPoint>();
+
+        //frame.PlayerCount;
+        // Photon.Deterministi
+        
         while (aiFilter.Next(out var _, out var aiSpawnPoint))
         {
+            Log.Debug("Spawning AI");
             AssetGuid prototypeID = ConfigAssetsHelper.GetGameConfig(frame).aiCarPrototype.Id;
+            Log.Debug("Prototype ID: " + prototypeID);
             SpawnFromPrototype(frame, frame.FindAsset<EntityPrototype>(prototypeID));
         }
     }

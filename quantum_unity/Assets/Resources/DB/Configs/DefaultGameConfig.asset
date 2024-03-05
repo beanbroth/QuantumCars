@@ -17,3 +17,6 @@ MonoBehaviour:
       Path: Resources/DB/Configs/DefaultGameConfig
       Guid:
         Value: 1447335239002490440
+    aiCarPrototype:
+      Id:
+        Value: 2713639564366554777
