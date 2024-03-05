@@ -1,10 +1,12 @@
 asset GameConfig;
+asset AIConfig;
 
 enum GameState
 {
 GameRunning,
 GameSetup,
-GameEnd
+GameEnd,
+GameReset
 }
 
 singleton component GameSessionManager 
@@ -16,4 +18,9 @@ singleton component GameSessionManager
 component SpawnPoint
 {
     bool hasSpawnedFlag;
+}
+
+component AIController
+{
+    asset_ref<AIConfig> aiConfig;
 }

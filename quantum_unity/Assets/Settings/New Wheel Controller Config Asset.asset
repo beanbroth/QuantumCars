@@ -17,3 +17,21 @@ MonoBehaviour:
       Path: 
       Guid:
         Value: 0
+    springStrength:
+      RawValue: 203161600
+    springDamper:
+      RawValue: 48103424
+    tireGripFactor:
+      Samples: []
+      PreWrapMode: 0
+      PostWrapMode: 0
+      StartTime:
+        RawValue: 0
+      EndTime:
+        RawValue: 65536
+      Resolution: 32
+      OriginalPreWrapMode: 0
+      OriginalPostWrapMode: 0
+      Keys: []
+    tireMass:
+      RawValue: 131072

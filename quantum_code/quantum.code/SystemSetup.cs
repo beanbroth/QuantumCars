@@ -24,10 +24,12 @@ namespace Quantum {
         new Core.PlayerConnectedSystem(),
 
         // user systems go here 
-        new MovementSystem(),
+        new VehiclePhysicsSystem(),
         new PlayerSpawnSystem(),
         new GameSessionSystem(),
         new SpawnSystem(),
+        new PlayerSteeringSystem(),
+        new AISteeringSystem(),
       };
     }
   }

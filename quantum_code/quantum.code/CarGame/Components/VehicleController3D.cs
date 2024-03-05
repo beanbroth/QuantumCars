@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Photon.Deterministic;
 using Quantum.Core;
@@ -13,6 +14,8 @@ namespace Quantum
         public void UpdateInternalVariables(FrameBase frame, EntityRef entity, VehicleController3DConfig rigConfig,
             FPVector2 input)
         {
+            input.X = FPMath.Clamp(input.X, -1, 1);
+            input.Y = FPMath.Clamp(input.Y, -1, 1);
             SteeringAngle = input.X * rigConfig.maxSteerAngle;
             Throttle = input.Y;
         }
@@ -51,7 +54,6 @@ namespace Quantum
             VehicleController3DConfig rigConfig, WheelControllerConfig wheelConfig, Hit3D tireHit, int wheelIndex)
         {
             //Draw.Ray(origin, direction, color)
-            
             FPVector3 wheelLocalPosition = rigConfig.wheelLocalPositions[wheelIndex];
             FPVector3 wheelWorldPosition = transform->Position + transform->Rotation * wheelLocalPosition;
 
@@ -63,20 +65,16 @@ namespace Quantum
                 FP steerAngleRadians = FP.Deg2Rad * -SteeringAngle;
                 FPVector3 carForward = transform->Forward;
                 FPVector3 carRight = transform->Right;
-                steeringDirection = FPMath.Cos(steerAngleRadians) * carRight + FPMath.Sin(steerAngleRadians) * carForward;
+                steeringDirection = FPMath.Cos(steerAngleRadians) * carRight +
+                                    FPMath.Sin(steerAngleRadians) * carForward;
             }
 
             FPVector3 tireWorldVel = carPhysicsBody->GetPointVelocity(wheelWorldPosition, transform);
-    
             FP steeringVel = FPVector3.Dot(steeringDirection, tireWorldVel);
             FP desiredVelChange = -steeringVel * wheelConfig.tireGripFactor.Evaluate(FPMath.Abs(steeringVel));
-    
             FP desiredAccel = desiredVelChange / frame.DeltaTime;
-    
             carPhysicsBody->AddForceAtPosition(steeringDirection * (wheelConfig.tireMass * desiredAccel),
                 wheelWorldPosition, transform);
-            
-
 
 // Draw wheel's right vector
             Draw.Ray(wheelWorldPosition, (transform->Right), ColorRGBA.Red);
@@ -89,10 +87,8 @@ namespace Quantum
 
 // Draw force applied on the tire
             FPVector3 forceVector = (steeringDirection * (wheelConfig.tireMass * desiredAccel));
-            Draw.Ray(wheelWorldPosition, forceVector,ColorRGBA.Yellow);
-            
+            Draw.Ray(wheelWorldPosition, forceVector, ColorRGBA.Yellow);
         }
-
 
         private void ApplySuspensionForces(PhysicsBody3D* carPhysicsBody, Transform3D* transform,
             VehicleController3DConfig rigConfig, WheelControllerConfig wheelConfig, Hit3D tireHit, int wheelIndex)

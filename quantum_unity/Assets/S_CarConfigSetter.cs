@@ -78,7 +78,9 @@ public class S_CarConfigSetter : MonoBehaviour
 
     private void FindAndSetConfigAssets()
     {
-        var controller3D = entityPrototype?.GetComponents<EntityComponentVehicleController3D>();
+        var controller3D = entityPrototype?
+            .GetComponents<EntityComponentVehicleController3D>();
+        
         if (controller3D == null || controller3D.Length == 0)
         {
             Debug.Log("No VehicleController3D found in EntityPrototype.");

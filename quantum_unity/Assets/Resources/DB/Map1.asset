@@ -57,7 +57,7 @@ MonoBehaviour:
         Y:
           RawValue: 0
         Z:
-          RawValue: 0
+          RawValue: 16180838
       PhysicsMaterial:
         Id:
           Value: 0
@@ -66,11 +66,11 @@ MonoBehaviour:
         RawValue: 0
       BoxExtents:
         X:
-          RawValue: 3276800
+          RawValue: 4915200
         Y:
           RawValue: 32768
         Z:
-          RawValue: 3276800
+          RawValue: 16384000
       SmoothSphereMeshCollisions: 0
       StaticData:
         Name: BoxStaticCollider
@@ -85,7 +85,8 @@ MonoBehaviour:
       MutableMode: 0
     MapEntities: []
   Prototypes:
-  - GameSessionManager: []
+  - AIController: []
+    GameSessionManager: []
     PlayerLink: []
     SpawnPoint: []
     VehicleController3D: []
@@ -179,7 +180,121 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - GameSessionManager: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint: []
+    VehicleController3D:
+    - RigConfig:
+        Id:
+          Value: 4572399945747127961
+      WheelConfigs:
+      - Id:
+          Value: 4096052493333747310
+      - Id:
+          Value: 4096052493333747310
+      - Id:
+          Value: 4200002946736381701
+      - Id:
+          Value: 4200002946736381701
+      Throttle:
+        RawValue: 0
+      Velocity:
+        RawValue: 0
+      SteeringAngle:
+        RawValue: 0
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D:
+    - Version: 2
+      Config:
+        Value: 58
+      Mass:
+        RawValue: 6553600
+      Drag:
+        RawValue: 0
+      AngularDrag:
+        RawValue: 3276
+      CenterOfMass:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      RotationFreeze:
+        Value: 0
+      GravityScale:
+        _hasValue: 0
+        _value:
+          RawValue: 65536
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 2
+        SphereRadius:
+          RawValue: 32768
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 73728
+          Y:
+            RawValue: 32768
+          Z:
+            RawValue: 119468
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 1
+      Layer: 0
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1090519
+        Y:
+          RawValue: 211681
+        Z:
+          RawValue: 0
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
     PlayerLink: []
     SpawnPoint:
     - hasSpawnedFlag:
@@ -202,11 +317,11 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: -3289907
         Y:
           RawValue: 154009
         Z:
-          RawValue: 950272
+          RawValue: 127139
       Rotation:
         X:
           RawValue: 0
@@ -217,83 +332,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - GameSessionManager: []
-    PlayerLink: []
-    SpawnPoint:
-    - hasSpawnedFlag:
-        Value: 0
-    VehicleController3D: []
-    CharacterController2D: []
-    CharacterController3D: []
-    NavMeshAvoidanceAgent: []
-    NavMeshAvoidanceObstacle: []
-    NavMeshPathfinder: []
-    NavMeshSteeringAgent: []
-    PhysicsBody2D: []
-    PhysicsBody3D: []
-    PhysicsCollider2D: []
-    PhysicsCollider3D: []
-    PhysicsCallbacks2D: []
-    PhysicsCallbacks3D: []
-    Transform2D: []
-    Transform2DVertical: []
-    Transform3D:
-    - Position:
-        X:
-          RawValue: 1115422
-        Y:
-          RawValue: 154009
-        Z:
-          RawValue: 950272
-      Rotation:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 0
-    View: []
-    PhysicsJoints2D: []
-    PhysicsJoints3D: []
-  - GameSessionManager: []
-    PlayerLink: []
-    SpawnPoint:
-    - hasSpawnedFlag:
-        Value: 0
-    VehicleController3D: []
-    CharacterController2D: []
-    CharacterController3D: []
-    NavMeshAvoidanceAgent: []
-    NavMeshAvoidanceObstacle: []
-    NavMeshPathfinder: []
-    NavMeshSteeringAgent: []
-    PhysicsBody2D: []
-    PhysicsBody3D: []
-    PhysicsCollider2D: []
-    PhysicsCollider3D: []
-    PhysicsCallbacks2D: []
-    PhysicsCallbacks3D: []
-    Transform2D: []
-    Transform2DVertical: []
-    Transform3D:
-    - Position:
-        X:
-          RawValue: 1463418
-        Y:
-          RawValue: 154009
-        Z:
-          RawValue: 950272
-      Rotation:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 0
-    View: []
-    PhysicsJoints2D: []
-    PhysicsJoints3D: []
-  - GameSessionManager:
+  - AIController: []
+    GameSessionManager:
     - CurrentGameState:
         Value: 1
       fallbackGameConfig:

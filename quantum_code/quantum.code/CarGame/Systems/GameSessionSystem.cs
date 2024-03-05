@@ -3,7 +3,7 @@ using Quantum;
 
 namespace Quantum;
 
-public unsafe class GameSessionSystem : SystemMainThreadFilter<GameSessionSystem.Filter>, ISignalOnPlayerDataSet
+public unsafe class GameSessionSystem : SystemMainThreadFilter<GameSessionSystem.Filter>
 {
     public struct Filter {
         public EntityRef Entity;
@@ -12,7 +12,14 @@ public unsafe class GameSessionSystem : SystemMainThreadFilter<GameSessionSystem
 
     public override void OnInit(Frame f)
     {
-
+        GameSessionManager* gameSession = f.Unsafe.GetPointerSingleton<GameSessionManager>();
+        if (gameSession == null)
+        {
+            Log.Error("GameSessionSystem.Update: GameSession is null");
+            return;
+        }
+        gameSession->ChangeGameState(f, GameState.GameSetup);
+        Log.Debug("GameSessionSystem.OnInit");
     }
 
 
@@ -30,13 +37,6 @@ public unsafe class GameSessionSystem : SystemMainThreadFilter<GameSessionSystem
 
     public void OnPlayerDataSet(Frame f, PlayerRef player)
     {
-        GameSessionManager* gameSession = f.Unsafe.GetPointerSingleton<GameSessionManager>();
-        if (gameSession == null)
-        {
-            Log.Error("GameSessionSystem.Update: GameSession is null");
-            return;
-        }
-        gameSession->ChangeGameState(f, GameState.GameSetup);
-        Log.Debug("GameSessionSystem.OnInit");
+      
     }
 }

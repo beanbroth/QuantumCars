@@ -31,6 +31,7 @@ namespace Quantum.Editor {
       public Quantum.GameConfig[] GameConfig = {};
       public Quantum.VehicleController3DConfig[] VehicleController3DConfig = {};
       public Quantum.WheelControllerConfig[] WheelControllerConfig = {};
+      public Quantum.AIConfig[] AIConfig = {};
       public Quantum.SimulationConfig[] SimulationConfig = {};
       public Quantum.BinaryData[] BinaryData = {};
       public Quantum.CharacterController2DConfig[] CharacterController2DConfig = {};

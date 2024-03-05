@@ -76,6 +76,11 @@ MonoBehaviour:
         Id:
           Value: 2917796873225125946
       ResourcePath: DB/SpawnPointEntity
+    - Path: Resources/DB/Configs/FrontWheelConfig
+      AssetRef:
+        Id:
+          Value: 4096052493333747310
+      ResourcePath: DB/Configs/FrontWheelConfig
     - Path: Resources/DB/Configs/DefaultWheelConfig
       AssetRef:
         Id:

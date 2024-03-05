@@ -1,4 +1,5 @@
 using System;
+using Photon.Deterministic;
 using Quantum;
 
 namespace Quantum;
@@ -17,7 +18,7 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged
         Transform3D* entityTransform = f.Unsafe.GetPointer<Transform3D>(entityRef);
 
         // Variables for the first pass
-        bool foundUnspawned = false;
+        //bool foundUnspawned = false;
         int spawnCount = 0;
         Transform3D* selectedSpawnTransform = null;
         SpawnPoint* selectedSpawnPoint = null;
@@ -37,35 +38,35 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged
         }
 
         // If no unspawned spawn points were found, proceed to randomly select one
-        if (!foundUnspawned && spawnCount > 0)
-        {
-            int randomIndex = new Random().Next(spawnCount);
-            int currentIndex = 0;
-            spawnsFilter = f.Filter<Transform3D, SpawnPoint>(); // Reset filter to iterate again
-
-            // Second pass: Select a random spawn point
-            while (spawnsFilter.NextUnsafe(out var _, out var spawnTransform, out var spawnPoint))
-            {
-                if (currentIndex == randomIndex)
-                {
-                    selectedSpawnTransform = spawnTransform;
-                    selectedSpawnPoint = spawnPoint;
-                    break;
-                }
-
-                currentIndex++;
-            }
-
-            if (selectedSpawnTransform != null)
-            {
-                entityTransform->Position = selectedSpawnTransform->Position;
-                entityTransform->Rotation = selectedSpawnTransform->Rotation;
-                if (selectedSpawnPoint != null)
-                {
-                    selectedSpawnPoint->hasSpawnedFlag = true;
-                }
-            }
-        }
+        // if (!foundUnspawned && spawnCount > 0)
+        // {
+        //     int randomIndex = new Random().Next(spawnCount);
+        //     int currentIndex = 0;
+        //     spawnsFilter = f.Filter<Transform3D, SpawnPoint>(); // Reset filter to iterate again
+        //
+        //     // Second pass: Select a random spawn point
+        //     while (spawnsFilter.NextUnsafe(out var _, out var spawnTransform, out var spawnPoint))
+        //     {
+        //         if (currentIndex == randomIndex)
+        //         {
+        //             selectedSpawnTransform = spawnTransform;
+        //             selectedSpawnPoint = spawnPoint;
+        //             break;
+        //         }
+        //
+        //         currentIndex++;
+        //     }
+        //
+        //     if (selectedSpawnTransform != null)
+        //     {
+        //         entityTransform->Position = selectedSpawnTransform->Position;
+        //         entityTransform->Rotation = selectedSpawnTransform->Rotation;
+        //         if (selectedSpawnPoint != null)
+        //         {
+        //             selectedSpawnPoint->hasSpawnedFlag = true;
+        //         }
+        //     }
+        // }
     }
 
     public static void RepositionEntity(Frame f, EntityRef entityToReposition)
@@ -92,6 +93,9 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged
             case GameState.GameEnd:
                 ResetAllSpawnPointFlags(f);
                 break;
+            case GameState.GameReset:
+                RepositionAllVehicles(f);
+                break;
         }
     }
 
@@ -100,14 +104,20 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged
         var aiFilter = frame.Filter<SpawnPoint>();
 
         //frame.PlayerCount;
-        // Photon.Deterministi
+        
         
         while (aiFilter.Next(out var _, out var aiSpawnPoint))
         {
-            Log.Debug("Spawning AI");
+    
             AssetGuid prototypeID = ConfigAssetsHelper.GetGameConfig(frame).aiCarPrototype.Id;
-            Log.Debug("Prototype ID: " + prototypeID);
-            SpawnFromPrototype(frame, frame.FindAsset<EntityPrototype>(prototypeID));
+           
+           EntityRef aiCar = SpawnFromPrototype(frame, frame.FindAsset<EntityPrototype>(prototypeID));
+            
+            var aiController = new AIController()
+            {
+            
+            };
+            frame.Add(aiCar, aiController);
         }
     }
 
