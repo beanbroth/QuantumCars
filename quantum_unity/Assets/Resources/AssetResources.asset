@@ -56,6 +56,11 @@ MonoBehaviour:
         Id:
           Value: 1447335239002490440
       ResourcePath: DB/Configs/DefaultGameConfig
+    - Path: Resources/DB/Map1_navigationGraph
+      AssetRef:
+        Id:
+          Value: 1627738664439089070
+      ResourcePath: DB/Map1_navigationGraph
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
@@ -86,6 +91,11 @@ MonoBehaviour:
         Id:
           Value: 4200002946736381701
       ResourcePath: DB/Configs/DefaultWheelConfig
+    - Path: Resources/DB/Map1_customData
+      AssetRef:
+        Id:
+          Value: 4401642737911863117
+      ResourcePath: DB/Map1_customData
     - Path: Resources/DB/Configs/DefaultVehicleControllerConfig
       AssetRef:
         Id:

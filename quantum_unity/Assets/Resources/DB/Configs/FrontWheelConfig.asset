@@ -20,7 +20,7 @@ MonoBehaviour:
     springStrength:
       RawValue: 131072000
     springDamper:
-      RawValue: 6553600
+      RawValue: 13107200
     tireGripFactor:
       Samples:
       - RawValue: 65536

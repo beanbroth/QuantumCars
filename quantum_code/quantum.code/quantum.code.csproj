@@ -73,10 +73,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarGame\AssetsAndConfigs\GameConfig.cs" />
+    <Compile Include="CarGame\AssetsAndConfigs\MapCustomData.cs" />
     <Compile Include="CarGame\AssetsAndConfigs\VehicleController3DConfig.cs" />
     <Compile Include="CarGame\AssetsAndConfigs\WheelControllerConfig.cs" />
     <Compile Include="CarGame\Components\AIController.cs" />
+    <Compile Include="CarGame\Components\Node.cs" />
     <Compile Include="CarGame\ConfigAssetsHelper.cs" />
+    <Compile Include="CarGame\DumbGraph.cs" />
+    <Compile Include="CarGame\Graph.cs" />
     <Compile Include="CarGame\HelperFunctions.cs" />
     <Compile Include="CarGame\SpawnSystem.cs" />
     <Compile Include="CarGame\GameSessionManager.cs" />

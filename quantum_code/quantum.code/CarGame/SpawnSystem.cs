@@ -104,19 +104,12 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged
         var aiFilter = frame.Filter<SpawnPoint>();
 
         //frame.PlayerCount;
-        
-        
         while (aiFilter.Next(out var _, out var aiSpawnPoint))
         {
-    
             AssetGuid prototypeID = ConfigAssetsHelper.GetGameConfig(frame).aiCarPrototype.Id;
-           
-           EntityRef aiCar = SpawnFromPrototype(frame, frame.FindAsset<EntityPrototype>(prototypeID));
-            
-            var aiController = new AIController()
-            {
-            
-            };
+            EntityRef aiCar = SpawnFromPrototype(frame, frame.FindAsset<EntityPrototype>(prototypeID));
+            var mapAIGraph = ConfigAssetsHelper.GetAINavigationGraph(frame);
+            var aiController = new AIController() { CurrentNode = mapAIGraph.GetNode(mapAIGraph.nodes[0].Neighbors[0]), NodeReachedDistance = 50 };
             frame.Add(aiCar, aiController);
         }
     }

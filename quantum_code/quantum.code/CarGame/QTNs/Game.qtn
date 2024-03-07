@@ -1,5 +1,8 @@
 asset GameConfig;
 asset AIConfig;
+asset MapCustomData;
+asset Graph;
+asset DumbGraph;
 
 enum GameState
 {
@@ -20,7 +23,18 @@ component SpawnPoint
     bool hasSpawnedFlag;
 }
 
+[Serializable]
+struct Node
+{
+     FPVector3 Position;
+     int Id;
+     array<int>[16] Neighbors;
+     int NeighborCount;
+}
+
 component AIController
 {
+    Node CurrentNode;
     asset_ref<AIConfig> aiConfig;
+    FP NodeReachedDistance;
 }

@@ -22,5 +22,15 @@ namespace Quantum
             return f.FindAsset<GameConfig>(f.RuntimeConfig.GameConfig.Id);
             // }
         }
+        
+        public static MapCustomData GetMapCustomData(Frame f)
+        {
+            return f.FindAsset<MapCustomData>(f.Map.UserAsset.Id);
+        }
+        
+        public static Graph GetAINavigationGraph(Frame f)
+        {
+            return f.FindAsset<Graph>(GetMapCustomData(f).AINavigationGraph.Id);
+        }
     }
 }

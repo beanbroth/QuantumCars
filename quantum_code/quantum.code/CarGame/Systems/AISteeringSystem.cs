@@ -17,10 +17,18 @@ public unsafe class AISteeringSystem : SystemMainThreadFilter<AISteeringSystem.F
     public override void Update(Frame f, ref Filter filter)
     {
         var rigConfig = f.FindAsset<VehicleController3DConfig>(filter.VehicleController3D->RigConfig.Id);
-        var playerFilter = f.Filter<PlayerLink, VehicleController3D, Transform3D>();
-        playerFilter.Next(out var playerEntity, out var playerLink, out var vehicleController, out var transform3D);
+
+
+        if (filter.AIController->ReachedNode(filter.Transform3D))
+        {
+            filter.AIController->SetCurrentNode(ConfigAssetsHelper.GetAINavigationGraph(f));
+        }
         
-        FPVector2 SteeringDirection = filter.AIController->CalculateSteeringDirection(filter.Transform3D,transform3D);
+        
+        FPVector2 SteeringDirection = filter.AIController->SteerTowardsCurrentNode(filter.Transform3D);
+        
+        
+        
         
         filter.VehicleController3D->UpdateInternalVariables(f, filter.Entity, rigConfig, SteeringDirection);
     }
