@@ -27,7 +27,8 @@ public class S_SpawnPointsGridTool : MonoBehaviour
         // Create new children
         for (int i = 0; i < rows * columns; i++)
         {
-            Instantiate(childPrefab, transform);
+            GameObject child = Instantiate(childPrefab, transform);
+            child.tag = "SpawnPoint"; // Tagging the child
         }
 
         // Layout the new children
@@ -48,6 +49,7 @@ public class S_SpawnPointsGridTool : MonoBehaviour
                     Vector3 position = startPosition + new Vector3(x * spacing, 0, z * spacing);
                     Transform child = transform.GetChild(childIndex);
                     child.position = position;
+                    child.tag = "SpawnPoint"; // Tagging the child
                 }
             }
         }

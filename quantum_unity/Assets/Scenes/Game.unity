@@ -12545,6 +12545,9 @@ MonoBehaviour:
     GameConfig:
       Id:
         Value: 1447335239002490440
+    GameMap:
+      Id:
+        Value: 0
   Players:
   - CharacterPrototype:
       Id:
@@ -60663,7 +60666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710087913}
   serializedVersion: 2
-  m_LocalRotation: {x: -9.951048e-10, y: 0.96779346, z: -0.25174552, w: -0.0000000038255106}
+  m_LocalRotation: {x: 0.000000006573202, y: 0.9677935, z: -0.25174552, w: 0.000000025269575}
   m_LocalPosition: {x: 54.1984, y: -51.81578, z: 134.09483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -70213,7 +70216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019622534}
   serializedVersion: 2
-  m_LocalRotation: {x: -9.951048e-10, y: 0.96779346, z: -0.25174552, w: -0.0000000038255106}
+  m_LocalRotation: {x: 0.000000006573202, y: 0.9677935, z: -0.25174552, w: 0.000000025269575}
   m_LocalPosition: {x: 54.1984, y: -51.81578, z: 134.09483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

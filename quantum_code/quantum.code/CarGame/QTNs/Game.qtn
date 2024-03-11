@@ -2,25 +2,27 @@ asset GameConfig;
 asset AIConfig;
 asset MapCustomData;
 asset Graph;
-asset DumbGraph;
 
 enum GameState
 {
-GameRunning,
-GameSetup,
-GameEnd,
-GameReset
+Setup,
+CountDown,
+GamePlay,
+SuddenDeath,
+RoundOver,
+Reset
 }
 
-singleton component GameSessionManager 
+singleton component GameSessionManager
 {
-    GameState CurrentGameState;
+    [HideInInspector] GameState CurrentGameState;
     asset_ref<GameConfig> fallbackGameConfig;
+    [HideInInspector] FrameTimer suddenDeathTimer;
 }
 
-component SpawnPoint
+struct FrameTimer
 {
-    bool hasSpawnedFlag;
+    int _frame;
 }
 
 [Serializable]
@@ -37,4 +39,9 @@ component AIController
     Node CurrentNode;
     asset_ref<AIConfig> aiConfig;
     FP NodeReachedDistance;
+}
+
+component FinishLine
+{
+    bool hasFinished;
 }

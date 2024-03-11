@@ -117,6 +117,7 @@ public unsafe class S_RacingLineTool : MonoBehaviour
     private void AddPathNodes()
     {
         InitializeData();
+        
         graphAsset.Clear();
         var pathNodes = CalculateNavMeshPathAndCreateNodes(startPoint.transform.position, endPoint.transform.position);
         int lastNodeId = -1;

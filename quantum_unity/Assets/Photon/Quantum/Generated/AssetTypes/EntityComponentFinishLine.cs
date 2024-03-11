@@ -4,5 +4,5 @@
 // </auto-generated>
 
 [UnityEngine.DisallowMultipleComponent()]
-public partial class EntityComponentSpawnPoint : EntityComponentBase<Quantum.Prototypes.SpawnPoint_Prototype> {
+public partial class EntityComponentFinishLine : EntityComponentBase<Quantum.Prototypes.FinishLine_Prototype> {
 }

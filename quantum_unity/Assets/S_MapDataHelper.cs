@@ -21,18 +21,29 @@ public class S_MapDataHelper : MonoBehaviour
     {
         InitializeData(); // gets references to MapData MonoBehaviour, which stores all the asset data
 
-        // Determine the path of the current scene
+        // Get the current scene name
         string scenePath = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path;
         string sceneName = Path.GetFileNameWithoutExtension(scenePath);
-        string folderPath = Path.GetDirectoryName(scenePath) + "/LevelData";
 
-        // Create the "LevelData" subfolder if it doesn't exist
+        // Set the new folder path
+        string baseFolderPath = "Assets/Resources/DB/LevelData";
+        string folderPath = $"{baseFolderPath}/{sceneName}";
+
+        // Create the necessary folders if they don't exist
+        if (!AssetDatabase.IsValidFolder("Assets/Resources/DB"))
+        {
+            AssetDatabase.CreateFolder("Assets/Resources", "DB");
+        }
+        if (!AssetDatabase.IsValidFolder(baseFolderPath))
+        {
+            AssetDatabase.CreateFolder("Assets/Resources/DB", "LevelData");
+        }
         if (!AssetDatabase.IsValidFolder(folderPath))
         {
-            AssetDatabase.CreateFolder(Path.GetDirectoryName(scenePath), "LevelData");
+            AssetDatabase.CreateFolder(baseFolderPath, sceneName);
         }
 
-        // Naming convention
+        // File paths using the new folder path
         string mapAssetPath = folderPath + $"/{sceneName}_map.asset";
         string customDataAssetPath = folderPath + $"/{sceneName}_customData.asset";
         string graphAssetPath = folderPath + $"/{sceneName}_navigationGraph.asset";

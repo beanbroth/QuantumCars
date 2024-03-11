@@ -15,13 +15,6 @@ namespace Quantum.Editor {
     }
   }
 
-  [CustomPropertyDrawer(typeof(AssetRefDumbGraph))]
-  public class AssetRefDumbGraphPropertyDrawer : PropertyDrawer {
-    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
-      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(DumbGraphAsset));
-    }
-  }
-
   [CustomPropertyDrawer(typeof(AssetRefGameConfig))]
   public class AssetRefGameConfigPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {

@@ -116,9 +116,16 @@ public unsafe partial class Graph
 
     public void Clear()
     {
+        if (nodes == null)
+        {
+            // nodes is not initialized, so there's nothing to clear
+            return;
+        }
+
         for (int i = 0; i < nodes.Length; i++)
         {
             nodes[i] = new Node();
         }
     }
+
 }

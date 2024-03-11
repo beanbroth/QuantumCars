@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Quantum.CarGame;
-using Quantum.Game;
 
 namespace Quantum {
   public static class SystemSetup {
@@ -25,11 +24,11 @@ namespace Quantum {
 
         // user systems go here 
         new VehiclePhysicsSystem(),
-        new PlayerSpawnSystem(),
         new GameSessionSystem(),
         new SpawnSystem(),
         new PlayerSteeringSystem(),
         new AISteeringSystem(),
+        new LevelTriggerSystem(),
       };
     }
   }

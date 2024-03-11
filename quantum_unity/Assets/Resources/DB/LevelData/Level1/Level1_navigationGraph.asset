@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd688da29241e8e4c803bd5277022d16, type: 3}
+  m_Name: Level1_navigationGraph
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/LevelData/Level1/Level1_navigationGraph
+      Guid:
+        Value: 3213661720575080166
+    nodes:
+    - Id: 0
+      NeighborCount: 1
+      Neighbors: 01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      Position:
+        X:
+          RawValue: -144179
+        Y:
+          RawValue: 300810
+        Z:
+          RawValue: 782500
+    - Id: 1
+      NeighborCount: 0
+      Neighbors: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      Position:
+        X:
+          RawValue: 4718592
+        Y:
+          RawValue: 300810
+        Z:
+          RawValue: 8513126

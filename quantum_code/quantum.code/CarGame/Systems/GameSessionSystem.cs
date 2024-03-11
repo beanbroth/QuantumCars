@@ -3,40 +3,38 @@ using Quantum;
 
 namespace Quantum;
 
-public unsafe class GameSessionSystem : SystemMainThreadFilter<GameSessionSystem.Filter>
+public unsafe class GameSessionSystem : SystemMainThread, ISignalOnMapChanged
 {
-    public struct Filter {
-        public EntityRef Entity;
-        public GameSessionManager* GameSession;
-    }
-
     public override void OnInit(Frame f)
     {
+        f.GetOrAddSingleton<GameSessionManager>();
+        
         GameSessionManager* gameSession = f.Unsafe.GetPointerSingleton<GameSessionManager>();
         if (gameSession == null)
         {
             Log.Error("GameSessionSystem.Update: GameSession is null");
             return;
         }
-        gameSession->ChangeGameState(f, GameState.GameSetup);
+
+       // gameSession->CurrentGameState = GameState.CountDown;
+        gameSession->ChangeGameState(f, GameState.CountDown);
         Log.Debug("GameSessionSystem.OnInit");
     }
 
-
-    public override void Update(Frame f, ref Filter filter)
+    public override void Update(Frame f)
     {
-        GameSessionManager* gameSession = f.Unsafe.GetPointerSingleton<GameSessionManager>();
-        if (gameSession == null)
-        {
-            Log.Error("GameSessionSystem.Update: GameSession is null");
-            return;
-        }
-
-        
+           GameSessionManager* gameSession = f.Unsafe.GetPointerSingleton<GameSessionManager>();
+            if (gameSession == null)
+            {
+                Log.Error("GameSessionSystem.Update: GameSession is null");
+                return;
+            }
+            
+            gameSession->CheckSuddenDeathTimer(f);
     }
 
-    public void OnPlayerDataSet(Frame f, PlayerRef player)
+    public void OnMapChanged(Frame f, AssetRefMap previousMap)
     {
-      
+        Log.Debug( "GameSessionSystem.OnMapChanged");
     }
 }

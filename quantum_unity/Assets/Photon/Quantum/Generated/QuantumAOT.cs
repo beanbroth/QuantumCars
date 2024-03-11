@@ -22,9 +22,11 @@ public class QuantumAOT {
   public List<Photon.Deterministic.FP> FP;
   public List<Photon.Deterministic.FPVector2> FPVector2;
   public List<Photon.Deterministic.FPVector3> FPVector3;
+  public List<Quantum.AssetRefMap> AssetRefMap;
   public List<Quantum.AssetRefNavMesh> AssetRefNavMesh;
   public List<Quantum.Core.FrameBase.EntitiesConfig.ComponentBufferConfig> ComponentBufferConfig;
   public List<Quantum.FPAnimationCurve.Keyframe> Keyframe;
+  public List<Quantum.MapCustomData.SpawnPointData> SpawnPointData;
   public List<Quantum.MapStaticCollider2D> MapStaticCollider2D;
   public List<Quantum.MapStaticCollider3D> MapStaticCollider3D;
   public List<Quantum.Node> Node;

@@ -7,6 +7,7 @@ namespace Quantum
 {
     public partial class GameConfig
     {
-        public AssetRefEntityPrototype aiCarPrototype;
+        public AssetRefEntityPrototype CarPrototype;
+        public FP SuddenDeathDuration = 30;
     }
 }

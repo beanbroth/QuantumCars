@@ -32,7 +32,6 @@ namespace Quantum.Editor {
       public Quantum.MapCustomData[] MapCustomData = {};
       public Quantum.VehicleController3DConfig[] VehicleController3DConfig = {};
       public Quantum.WheelControllerConfig[] WheelControllerConfig = {};
-      public Quantum.DumbGraph[] DumbGraph = {};
       public Quantum.Graph[] Graph = {};
       public Quantum.AIConfig[] AIConfig = {};
       public Quantum.SimulationConfig[] SimulationConfig = {};
