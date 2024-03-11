@@ -20,9 +20,9 @@ MonoBehaviour:
     UserAsset:
       Id:
         Value: 4401642737911863117
-    Scene: Game
-    ScenePath: Assets/Photon/QuantumDemo/Game/Game.unity
-    SceneGuid: 03bd5ba32b9950244a08f22579187d8b
+    Scene: Level1
+    ScenePath: Assets/Scenes/Level1.unity
+    SceneGuid: 0949070630278fd40b69a1572b1450fd
     WorldSize: 256
     BucketsCount: 16
     BucketsSubdivisions: 8
@@ -365,121 +365,6 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - AIController: []
     GameSessionManager: []
-    PlayerLink:
-    - Player:
-        _index: 1
-    SpawnPoint: []
-    VehicleController3D:
-    - RigConfig:
-        Id:
-          Value: 4572399945747127961
-      WheelConfigs:
-      - Id:
-          Value: 4096052493333747310
-      - Id:
-          Value: 4096052493333747310
-      - Id:
-          Value: 4200002946736381701
-      - Id:
-          Value: 4200002946736381701
-      Throttle:
-        RawValue: 0
-      Velocity:
-        RawValue: 0
-      SteeringAngle:
-        RawValue: 0
-    CharacterController2D: []
-    CharacterController3D: []
-    NavMeshAvoidanceAgent: []
-    NavMeshAvoidanceObstacle: []
-    NavMeshPathfinder: []
-    NavMeshSteeringAgent: []
-    PhysicsBody2D: []
-    PhysicsBody3D:
-    - Version: 2
-      Config:
-        Value: 58
-      Mass:
-        RawValue: 6553600
-      Drag:
-        RawValue: 0
-      AngularDrag:
-        RawValue: 3276
-      CenterOfMass:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 0
-      RotationFreeze:
-        Value: 0
-      GravityScale:
-        _hasValue: 0
-        _value:
-          RawValue: 65536
-    PhysicsCollider2D: []
-    PhysicsCollider3D:
-    - ShapeConfig:
-        ShapeType: 2
-        SphereRadius:
-          RawValue: 32768
-        PositionOffset:
-          X:
-            RawValue: 0
-          Y:
-            RawValue: 0
-          Z:
-            RawValue: 0
-        BoxExtents:
-          X:
-            RawValue: 73728
-          Y:
-            RawValue: 32768
-          Z:
-            RawValue: 119468
-        RotationOffset:
-          X:
-            RawValue: 0
-          Y:
-            RawValue: 0
-          Z:
-            RawValue: 0
-        UserTag: 0
-        IsPersistent: 1
-        CompoundShapes: []
-        IsSetFromSourceCollider: 1
-      Layer: 0
-      IsTrigger: 0
-      PhysicsMaterial:
-        Id:
-          Value: 0
-    PhysicsCallbacks2D: []
-    PhysicsCallbacks3D:
-    - CallbackFlags:
-        Value: 0
-    Transform2D: []
-    Transform2DVertical: []
-    Transform3D:
-    - Position:
-        X:
-          RawValue: 1090519
-        Y:
-          RawValue: 211681
-        Z:
-          RawValue: 7392461
-      Rotation:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 11796480
-        Z:
-          RawValue: 0
-    View: []
-    PhysicsJoints2D: []
-    PhysicsJoints3D: []
-  - AIController: []
-    GameSessionManager: []
     PlayerLink: []
     SpawnPoint:
     - hasSpawnedFlag:
@@ -502,7 +387,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2634547
+          RawValue: -3289907
         Y:
           RawValue: 51773
         Z:
@@ -541,7 +426,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2634547
+          RawValue: -3289907
         Y:
           RawValue: 51773
         Z:
@@ -580,7 +465,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2634547
+          RawValue: -3289907
         Y:
           RawValue: 51773
         Z:
@@ -619,7 +504,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2634547
+          RawValue: -3289907
         Y:
           RawValue: 51773
         Z:
@@ -658,7 +543,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2634547
+          RawValue: -3289907
         Y:
           RawValue: 51773
         Z:
@@ -697,7 +582,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2634547
+          RawValue: -3289907
         Y:
           RawValue: 51773
         Z:
@@ -736,7 +621,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2634547
+          RawValue: -3289907
         Y:
           RawValue: 51773
         Z:
@@ -775,7 +660,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2634547
+          RawValue: -3289907
         Y:
           RawValue: 51773
         Z:
@@ -814,7 +699,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2634547
+          RawValue: -3289907
         Y:
           RawValue: 51773
         Z:
@@ -853,7 +738,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2634547
+          RawValue: -3289907
         Y:
           RawValue: 51773
         Z:
@@ -892,7 +777,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2372403
+          RawValue: -3027763
         Y:
           RawValue: 51773
         Z:
@@ -931,7 +816,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2372403
+          RawValue: -3027763
         Y:
           RawValue: 51773
         Z:
@@ -970,7 +855,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2372403
+          RawValue: -3027763
         Y:
           RawValue: 51773
         Z:
@@ -1009,7 +894,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2372403
+          RawValue: -3027763
         Y:
           RawValue: 51773
         Z:
@@ -1048,7 +933,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2372403
+          RawValue: -3027763
         Y:
           RawValue: 51773
         Z:
@@ -1087,7 +972,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2372403
+          RawValue: -3027763
         Y:
           RawValue: 51773
         Z:
@@ -1126,7 +1011,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2372403
+          RawValue: -3027763
         Y:
           RawValue: 51773
         Z:
@@ -1165,7 +1050,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2372403
+          RawValue: -3027763
         Y:
           RawValue: 51773
         Z:
@@ -1204,7 +1089,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2372403
+          RawValue: -3027763
         Y:
           RawValue: 51773
         Z:
@@ -1243,7 +1128,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2372403
+          RawValue: -3027763
         Y:
           RawValue: 51773
         Z:
@@ -1282,7 +1167,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2110259
+          RawValue: -2765619
         Y:
           RawValue: 51773
         Z:
@@ -1321,7 +1206,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2110259
+          RawValue: -2765619
         Y:
           RawValue: 51773
         Z:
@@ -1360,7 +1245,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2110259
+          RawValue: -2765619
         Y:
           RawValue: 51773
         Z:
@@ -1399,7 +1284,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2110259
+          RawValue: -2765619
         Y:
           RawValue: 51773
         Z:
@@ -1438,7 +1323,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2110259
+          RawValue: -2765619
         Y:
           RawValue: 51773
         Z:
@@ -1477,7 +1362,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2110259
+          RawValue: -2765619
         Y:
           RawValue: 51773
         Z:
@@ -1516,7 +1401,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2110259
+          RawValue: -2765619
         Y:
           RawValue: 51773
         Z:
@@ -1555,7 +1440,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2110259
+          RawValue: -2765619
         Y:
           RawValue: 51773
         Z:
@@ -1594,7 +1479,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2110259
+          RawValue: -2765619
         Y:
           RawValue: 51773
         Z:
@@ -1633,7 +1518,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -2110259
+          RawValue: -2765619
         Y:
           RawValue: 51773
         Z:
@@ -1672,7 +1557,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1848115
+          RawValue: -2503475
         Y:
           RawValue: 51773
         Z:
@@ -1711,7 +1596,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1848115
+          RawValue: -2503475
         Y:
           RawValue: 51773
         Z:
@@ -1750,7 +1635,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1848115
+          RawValue: -2503475
         Y:
           RawValue: 51773
         Z:
@@ -1789,7 +1674,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1848115
+          RawValue: -2503475
         Y:
           RawValue: 51773
         Z:
@@ -1828,7 +1713,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1848115
+          RawValue: -2503475
         Y:
           RawValue: 51773
         Z:
@@ -1867,7 +1752,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1848115
+          RawValue: -2503475
         Y:
           RawValue: 51773
         Z:
@@ -1906,7 +1791,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1848115
+          RawValue: -2503475
         Y:
           RawValue: 51773
         Z:
@@ -1945,7 +1830,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1848115
+          RawValue: -2503475
         Y:
           RawValue: 51773
         Z:
@@ -1984,7 +1869,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1848115
+          RawValue: -2503475
         Y:
           RawValue: 51773
         Z:
@@ -2023,7 +1908,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1848115
+          RawValue: -2503475
         Y:
           RawValue: 51773
         Z:
@@ -2062,7 +1947,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1585971
+          RawValue: -2241331
         Y:
           RawValue: 51773
         Z:
@@ -2101,7 +1986,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1585971
+          RawValue: -2241331
         Y:
           RawValue: 51773
         Z:
@@ -2140,7 +2025,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1585971
+          RawValue: -2241331
         Y:
           RawValue: 51773
         Z:
@@ -2179,7 +2064,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1585971
+          RawValue: -2241331
         Y:
           RawValue: 51773
         Z:
@@ -2218,7 +2103,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1585971
+          RawValue: -2241331
         Y:
           RawValue: 51773
         Z:
@@ -2257,7 +2142,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1585971
+          RawValue: -2241331
         Y:
           RawValue: 51773
         Z:
@@ -2296,7 +2181,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1585971
+          RawValue: -2241331
         Y:
           RawValue: 51773
         Z:
@@ -2335,7 +2220,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1585971
+          RawValue: -2241331
         Y:
           RawValue: 51773
         Z:
@@ -2374,7 +2259,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1585971
+          RawValue: -2241331
         Y:
           RawValue: 51773
         Z:
@@ -2413,7 +2298,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1585971
+          RawValue: -2241331
         Y:
           RawValue: 51773
         Z:
@@ -2452,7 +2337,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1323827
+          RawValue: -1979187
         Y:
           RawValue: 51773
         Z:
@@ -2491,7 +2376,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1323827
+          RawValue: -1979187
         Y:
           RawValue: 51773
         Z:
@@ -2530,7 +2415,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1323827
+          RawValue: -1979187
         Y:
           RawValue: 51773
         Z:
@@ -2569,7 +2454,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1323827
+          RawValue: -1979187
         Y:
           RawValue: 51773
         Z:
@@ -2608,7 +2493,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1323827
+          RawValue: -1979187
         Y:
           RawValue: 51773
         Z:
@@ -2647,7 +2532,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1323827
+          RawValue: -1979187
         Y:
           RawValue: 51773
         Z:
@@ -2686,7 +2571,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1323827
+          RawValue: -1979187
         Y:
           RawValue: 51773
         Z:
@@ -2725,7 +2610,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1323827
+          RawValue: -1979187
         Y:
           RawValue: 51773
         Z:
@@ -2764,7 +2649,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1323827
+          RawValue: -1979187
         Y:
           RawValue: 51773
         Z:
@@ -2803,7 +2688,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1323827
+          RawValue: -1979187
         Y:
           RawValue: 51773
         Z:
@@ -2842,7 +2727,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1061683
+          RawValue: -1717043
         Y:
           RawValue: 51773
         Z:
@@ -2881,7 +2766,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1061683
+          RawValue: -1717043
         Y:
           RawValue: 51773
         Z:
@@ -2920,7 +2805,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1061683
+          RawValue: -1717043
         Y:
           RawValue: 51773
         Z:
@@ -2959,7 +2844,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1061683
+          RawValue: -1717043
         Y:
           RawValue: 51773
         Z:
@@ -2998,7 +2883,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1061683
+          RawValue: -1717043
         Y:
           RawValue: 51773
         Z:
@@ -3037,7 +2922,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1061683
+          RawValue: -1717043
         Y:
           RawValue: 51773
         Z:
@@ -3076,7 +2961,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1061683
+          RawValue: -1717043
         Y:
           RawValue: 51773
         Z:
@@ -3115,7 +3000,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1061683
+          RawValue: -1717043
         Y:
           RawValue: 51773
         Z:
@@ -3154,7 +3039,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1061683
+          RawValue: -1717043
         Y:
           RawValue: 51773
         Z:
@@ -3193,7 +3078,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -1061683
+          RawValue: -1717043
         Y:
           RawValue: 51773
         Z:
@@ -3232,7 +3117,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -799539
+          RawValue: -1454899
         Y:
           RawValue: 51773
         Z:
@@ -3271,7 +3156,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -799539
+          RawValue: -1454899
         Y:
           RawValue: 51773
         Z:
@@ -3310,7 +3195,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -799539
+          RawValue: -1454899
         Y:
           RawValue: 51773
         Z:
@@ -3349,7 +3234,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -799539
+          RawValue: -1454899
         Y:
           RawValue: 51773
         Z:
@@ -3388,7 +3273,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -799539
+          RawValue: -1454899
         Y:
           RawValue: 51773
         Z:
@@ -3427,7 +3312,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -799539
+          RawValue: -1454899
         Y:
           RawValue: 51773
         Z:
@@ -3466,7 +3351,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -799539
+          RawValue: -1454899
         Y:
           RawValue: 51773
         Z:
@@ -3505,7 +3390,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -799539
+          RawValue: -1454899
         Y:
           RawValue: 51773
         Z:
@@ -3544,7 +3429,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -799539
+          RawValue: -1454899
         Y:
           RawValue: 51773
         Z:
@@ -3583,7 +3468,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -799539
+          RawValue: -1454899
         Y:
           RawValue: 51773
         Z:
@@ -3622,7 +3507,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -537395
+          RawValue: -1192755
         Y:
           RawValue: 51773
         Z:
@@ -3661,7 +3546,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -537395
+          RawValue: -1192755
         Y:
           RawValue: 51773
         Z:
@@ -3700,7 +3585,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -537395
+          RawValue: -1192755
         Y:
           RawValue: 51773
         Z:
@@ -3739,7 +3624,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -537395
+          RawValue: -1192755
         Y:
           RawValue: 51773
         Z:
@@ -3778,7 +3663,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -537395
+          RawValue: -1192755
         Y:
           RawValue: 51773
         Z:
@@ -3817,7 +3702,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -537395
+          RawValue: -1192755
         Y:
           RawValue: 51773
         Z:
@@ -3856,7 +3741,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -537395
+          RawValue: -1192755
         Y:
           RawValue: 51773
         Z:
@@ -3895,7 +3780,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -537395
+          RawValue: -1192755
         Y:
           RawValue: 51773
         Z:
@@ -3934,7 +3819,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -537395
+          RawValue: -1192755
         Y:
           RawValue: 51773
         Z:
@@ -3973,7 +3858,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -537395
+          RawValue: -1192755
         Y:
           RawValue: 51773
         Z:
@@ -4012,7 +3897,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -275251
+          RawValue: -930611
         Y:
           RawValue: 51773
         Z:
@@ -4051,7 +3936,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -275251
+          RawValue: -930611
         Y:
           RawValue: 51773
         Z:
@@ -4090,7 +3975,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -275251
+          RawValue: -930611
         Y:
           RawValue: 51773
         Z:
@@ -4129,7 +4014,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -275251
+          RawValue: -930611
         Y:
           RawValue: 51773
         Z:
@@ -4168,7 +4053,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -275251
+          RawValue: -930611
         Y:
           RawValue: 51773
         Z:
@@ -4207,7 +4092,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -275251
+          RawValue: -930611
         Y:
           RawValue: 51773
         Z:
@@ -4246,7 +4131,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -275251
+          RawValue: -930611
         Y:
           RawValue: 51773
         Z:
@@ -4285,7 +4170,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -275251
+          RawValue: -930611
         Y:
           RawValue: 51773
         Z:
@@ -4324,7 +4209,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -275251
+          RawValue: -930611
         Y:
           RawValue: 51773
         Z:
@@ -4363,7 +4248,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -275251
+          RawValue: -930611
         Y:
           RawValue: 51773
         Z:
@@ -4402,7 +4287,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -13107
+          RawValue: -668467
         Y:
           RawValue: 51773
         Z:
@@ -4441,7 +4326,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -13107
+          RawValue: -668467
         Y:
           RawValue: 51773
         Z:
@@ -4480,7 +4365,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -13107
+          RawValue: -668467
         Y:
           RawValue: 51773
         Z:
@@ -4519,7 +4404,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -13107
+          RawValue: -668467
         Y:
           RawValue: 51773
         Z:
@@ -4558,7 +4443,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -13107
+          RawValue: -668467
         Y:
           RawValue: 51773
         Z:
@@ -4597,7 +4482,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -13107
+          RawValue: -668467
         Y:
           RawValue: 51773
         Z:
@@ -4636,7 +4521,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -13107
+          RawValue: -668467
         Y:
           RawValue: 51773
         Z:
@@ -4675,7 +4560,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -13107
+          RawValue: -668467
         Y:
           RawValue: 51773
         Z:
@@ -4714,7 +4599,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -13107
+          RawValue: -668467
         Y:
           RawValue: 51773
         Z:
@@ -4753,7 +4638,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: -13107
+          RawValue: -668467
         Y:
           RawValue: 51773
         Z:
@@ -4792,7 +4677,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 249036
+          RawValue: -406323
         Y:
           RawValue: 51773
         Z:
@@ -4831,7 +4716,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 249036
+          RawValue: -406323
         Y:
           RawValue: 51773
         Z:
@@ -4870,7 +4755,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 249036
+          RawValue: -406323
         Y:
           RawValue: 51773
         Z:
@@ -4909,7 +4794,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 249036
+          RawValue: -406323
         Y:
           RawValue: 51773
         Z:
@@ -4948,7 +4833,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 249036
+          RawValue: -406323
         Y:
           RawValue: 51773
         Z:
@@ -4987,7 +4872,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 249036
+          RawValue: -406323
         Y:
           RawValue: 51773
         Z:
@@ -5026,7 +4911,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 249036
+          RawValue: -406323
         Y:
           RawValue: 51773
         Z:
@@ -5065,7 +4950,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 249036
+          RawValue: -406323
         Y:
           RawValue: 51773
         Z:
@@ -5104,7 +4989,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 249036
+          RawValue: -406323
         Y:
           RawValue: 51773
         Z:
@@ -5143,7 +5028,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 249036
+          RawValue: -406323
         Y:
           RawValue: 51773
         Z:
@@ -5182,7 +5067,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 511180
+          RawValue: -144179
         Y:
           RawValue: 51773
         Z:
@@ -5221,7 +5106,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 511180
+          RawValue: -144179
         Y:
           RawValue: 51773
         Z:
@@ -5260,7 +5145,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 511180
+          RawValue: -144179
         Y:
           RawValue: 51773
         Z:
@@ -5299,7 +5184,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 511180
+          RawValue: -144179
         Y:
           RawValue: 51773
         Z:
@@ -5338,7 +5223,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 511180
+          RawValue: -144179
         Y:
           RawValue: 51773
         Z:
@@ -5377,7 +5262,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 511180
+          RawValue: -144179
         Y:
           RawValue: 51773
         Z:
@@ -5416,7 +5301,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 511180
+          RawValue: -144179
         Y:
           RawValue: 51773
         Z:
@@ -5455,7 +5340,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 511180
+          RawValue: -144179
         Y:
           RawValue: 51773
         Z:
@@ -5494,7 +5379,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 511180
+          RawValue: -144179
         Y:
           RawValue: 51773
         Z:
@@ -5533,7 +5418,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 511180
+          RawValue: -144179
         Y:
           RawValue: 51773
         Z:
@@ -5572,7 +5457,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: 117964
         Y:
           RawValue: 51773
         Z:
@@ -5611,7 +5496,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: 117964
         Y:
           RawValue: 51773
         Z:
@@ -5650,7 +5535,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: 117964
         Y:
           RawValue: 51773
         Z:
@@ -5689,7 +5574,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: 117964
         Y:
           RawValue: 51773
         Z:
@@ -5728,7 +5613,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: 117964
         Y:
           RawValue: 51773
         Z:
@@ -5767,7 +5652,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: 117964
         Y:
           RawValue: 51773
         Z:
@@ -5806,7 +5691,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: 117964
         Y:
           RawValue: 51773
         Z:
@@ -5845,7 +5730,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: 117964
         Y:
           RawValue: 51773
         Z:
@@ -5884,7 +5769,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: 117964
         Y:
           RawValue: 51773
         Z:
@@ -5923,7 +5808,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 773324
+          RawValue: 117964
         Y:
           RawValue: 51773
         Z:
@@ -5962,7 +5847,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1035468
+          RawValue: 380108
         Y:
           RawValue: 51773
         Z:
@@ -6001,7 +5886,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1035468
+          RawValue: 380108
         Y:
           RawValue: 51773
         Z:
@@ -6040,7 +5925,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1035468
+          RawValue: 380108
         Y:
           RawValue: 51773
         Z:
@@ -6079,7 +5964,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1035468
+          RawValue: 380108
         Y:
           RawValue: 51773
         Z:
@@ -6118,7 +6003,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1035468
+          RawValue: 380108
         Y:
           RawValue: 51773
         Z:
@@ -6157,7 +6042,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1035468
+          RawValue: 380108
         Y:
           RawValue: 51773
         Z:
@@ -6196,7 +6081,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1035468
+          RawValue: 380108
         Y:
           RawValue: 51773
         Z:
@@ -6235,7 +6120,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1035468
+          RawValue: 380108
         Y:
           RawValue: 51773
         Z:
@@ -6274,7 +6159,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1035468
+          RawValue: 380108
         Y:
           RawValue: 51773
         Z:
@@ -6313,7 +6198,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1035468
+          RawValue: 380108
         Y:
           RawValue: 51773
         Z:
@@ -6352,7 +6237,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1297612
+          RawValue: 642252
         Y:
           RawValue: 51773
         Z:
@@ -6391,7 +6276,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1297612
+          RawValue: 642252
         Y:
           RawValue: 51773
         Z:
@@ -6430,7 +6315,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1297612
+          RawValue: 642252
         Y:
           RawValue: 51773
         Z:
@@ -6469,7 +6354,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1297612
+          RawValue: 642252
         Y:
           RawValue: 51773
         Z:
@@ -6508,7 +6393,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1297612
+          RawValue: 642252
         Y:
           RawValue: 51773
         Z:
@@ -6547,7 +6432,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1297612
+          RawValue: 642252
         Y:
           RawValue: 51773
         Z:
@@ -6586,7 +6471,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1297612
+          RawValue: 642252
         Y:
           RawValue: 51773
         Z:
@@ -6625,7 +6510,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1297612
+          RawValue: 642252
         Y:
           RawValue: 51773
         Z:
@@ -6664,7 +6549,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1297612
+          RawValue: 642252
         Y:
           RawValue: 51773
         Z:
@@ -6703,7 +6588,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1297612
+          RawValue: 642252
         Y:
           RawValue: 51773
         Z:
@@ -6742,7 +6627,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1559756
+          RawValue: 904396
         Y:
           RawValue: 51773
         Z:
@@ -6781,7 +6666,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1559756
+          RawValue: 904396
         Y:
           RawValue: 51773
         Z:
@@ -6820,7 +6705,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1559756
+          RawValue: 904396
         Y:
           RawValue: 51773
         Z:
@@ -6859,7 +6744,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1559756
+          RawValue: 904396
         Y:
           RawValue: 51773
         Z:
@@ -6898,7 +6783,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1559756
+          RawValue: 904396
         Y:
           RawValue: 51773
         Z:
@@ -6937,7 +6822,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1559756
+          RawValue: 904396
         Y:
           RawValue: 51773
         Z:
@@ -6976,7 +6861,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1559756
+          RawValue: 904396
         Y:
           RawValue: 51773
         Z:
@@ -7015,7 +6900,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1559756
+          RawValue: 904396
         Y:
           RawValue: 51773
         Z:
@@ -7054,7 +6939,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1559756
+          RawValue: 904396
         Y:
           RawValue: 51773
         Z:
@@ -7093,7 +6978,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1559756
+          RawValue: 904396
         Y:
           RawValue: 51773
         Z:
@@ -7132,7 +7017,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1821900
+          RawValue: 1166540
         Y:
           RawValue: 51773
         Z:
@@ -7171,7 +7056,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1821900
+          RawValue: 1166540
         Y:
           RawValue: 51773
         Z:
@@ -7210,7 +7095,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1821900
+          RawValue: 1166540
         Y:
           RawValue: 51773
         Z:
@@ -7249,7 +7134,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1821900
+          RawValue: 1166540
         Y:
           RawValue: 51773
         Z:
@@ -7288,7 +7173,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1821900
+          RawValue: 1166540
         Y:
           RawValue: 51773
         Z:
@@ -7327,7 +7212,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1821900
+          RawValue: 1166540
         Y:
           RawValue: 51773
         Z:
@@ -7366,7 +7251,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1821900
+          RawValue: 1166540
         Y:
           RawValue: 51773
         Z:
@@ -7405,7 +7290,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1821900
+          RawValue: 1166540
         Y:
           RawValue: 51773
         Z:
@@ -7444,7 +7329,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1821900
+          RawValue: 1166540
         Y:
           RawValue: 51773
         Z:
@@ -7483,7 +7368,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 1821900
+          RawValue: 1166540
         Y:
           RawValue: 51773
         Z:
@@ -7522,7 +7407,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2084044
+          RawValue: 1428684
         Y:
           RawValue: 51773
         Z:
@@ -7561,7 +7446,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2084044
+          RawValue: 1428684
         Y:
           RawValue: 51773
         Z:
@@ -7600,7 +7485,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2084044
+          RawValue: 1428684
         Y:
           RawValue: 51773
         Z:
@@ -7639,7 +7524,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2084044
+          RawValue: 1428684
         Y:
           RawValue: 51773
         Z:
@@ -7678,7 +7563,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2084044
+          RawValue: 1428684
         Y:
           RawValue: 51773
         Z:
@@ -7717,7 +7602,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2084044
+          RawValue: 1428684
         Y:
           RawValue: 51773
         Z:
@@ -7756,7 +7641,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2084044
+          RawValue: 1428684
         Y:
           RawValue: 51773
         Z:
@@ -7795,7 +7680,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2084044
+          RawValue: 1428684
         Y:
           RawValue: 51773
         Z:
@@ -7834,7 +7719,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2084044
+          RawValue: 1428684
         Y:
           RawValue: 51773
         Z:
@@ -7873,7 +7758,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2084044
+          RawValue: 1428684
         Y:
           RawValue: 51773
         Z:
@@ -7912,7 +7797,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2346188
+          RawValue: 1690828
         Y:
           RawValue: 51773
         Z:
@@ -7951,7 +7836,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2346188
+          RawValue: 1690828
         Y:
           RawValue: 51773
         Z:
@@ -7990,7 +7875,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2346188
+          RawValue: 1690828
         Y:
           RawValue: 51773
         Z:
@@ -8029,7 +7914,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2346188
+          RawValue: 1690828
         Y:
           RawValue: 51773
         Z:
@@ -8068,7 +7953,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2346188
+          RawValue: 1690828
         Y:
           RawValue: 51773
         Z:
@@ -8107,7 +7992,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2346188
+          RawValue: 1690828
         Y:
           RawValue: 51773
         Z:
@@ -8146,7 +8031,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2346188
+          RawValue: 1690828
         Y:
           RawValue: 51773
         Z:
@@ -8185,7 +8070,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2346188
+          RawValue: 1690828
         Y:
           RawValue: 51773
         Z:
@@ -8224,7 +8109,7 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2346188
+          RawValue: 1690828
         Y:
           RawValue: 51773
         Z:
@@ -8263,7 +8148,1957 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 2346188
+          RawValue: 1690828
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1962147
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1952972
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: -397148
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1952972
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: -135004
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1952972
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 127139
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1952972
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 389283
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1952972
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 651427
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1952972
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 913571
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1952972
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1175715
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1952972
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1437859
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1952972
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1700003
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1952972
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1962147
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2215116
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: -397148
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2215116
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: -135004
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2215116
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 127139
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2215116
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 389283
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2215116
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 651427
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2215116
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 913571
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2215116
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1175715
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2215116
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1437859
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2215116
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1700003
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2215116
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1962147
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2477260
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: -397148
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2477260
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: -135004
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2477260
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 127139
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2477260
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 389283
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2477260
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 651427
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2477260
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 913571
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2477260
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1175715
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2477260
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1437859
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2477260
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1700003
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2477260
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1962147
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2739404
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: -397148
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2739404
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: -135004
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2739404
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 127139
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2739404
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 389283
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2739404
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 651427
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2739404
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 913571
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2739404
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1175715
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2739404
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1437859
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2739404
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1700003
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 2739404
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1962147
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 3001548
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: -397148
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 3001548
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: -135004
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 3001548
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 127139
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 3001548
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 389283
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 3001548
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 651427
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 3001548
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 913571
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 3001548
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1175715
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 3001548
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1437859
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 3001548
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 1700003
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 11796480
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIController: []
+    GameSessionManager: []
+    PlayerLink: []
+    SpawnPoint:
+    - hasSpawnedFlag:
+        Value: 0
+    VehicleController3D: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 3001548
         Y:
           RawValue: 51773
         Z:

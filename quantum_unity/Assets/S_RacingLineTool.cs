@@ -5,19 +5,32 @@ using UnityEngine.AI;
 using Quantum;
 using NavMesh = UnityEngine.AI.NavMesh; // Assuming Quantum is a necessary namespace
 #if UNITY_EDITOR
+using Unity.AI.Navigation;
 using UnityEditor;
 #endif
+
+#if UNITY_EDITOR
 
 [ExecuteInEditMode]
 public unsafe class S_RacingLineTool : MonoBehaviour
 {
+    // --- Object References ---
     [SerializeField] private GameObject startPoint;
     [SerializeField] private GameObject endPoint;
     private MapData mapData;
     private MapCustomDataAsset customData;
     private Graph graphAsset;
 
-    [InspectorButton("BakeNavigationGraph")] [SerializeField]
+    [Header("Unity NavMesh")]
+// --- Inspector Buttons and Flags ---
+    [InspectorButton("OpenAgentSettings")] [SerializeField]
+    private bool _openAgentSettings;
+    
+    [InspectorButton("BakeUnityNavmesh")]
+    [SerializeField]
+    private bool _bakeUnityNavmesh;
+
+    [Header("Quantum Graph")] [InspectorButton("BakeNavigationGraph")] [SerializeField]
     private bool _bakeNavigationGraph;
 
     [InspectorButton("ClearNavigationGraph")] [SerializeField]
@@ -25,6 +38,22 @@ public unsafe class S_RacingLineTool : MonoBehaviour
 
     [InspectorButton("DebugGraphContents")] [SerializeField]
     private bool _debugGraphContents;
+
+    private void OpenAgentSettings()
+    {
+        UnityEditor.AI.NavMeshEditorHelpers.OpenAgentSettings(0);
+    }
+
+    private void BakeUnityNavmesh()
+    {
+        //if there's more than one surface, debug a warning, and bake the first one
+        if (FindObjectsOfType<NavMeshSurface>().Length > 1)
+        {
+            Debug.LogWarning("There's more than one NavMeshSurface in the scene. Baking the first one found.");
+        }
+
+        FindObjectsOfType<NavMeshSurface>()[0].BuildNavMesh();
+    }
 
     private void InitializeData()
     {
@@ -92,7 +121,6 @@ public unsafe class S_RacingLineTool : MonoBehaviour
         var pathNodes = CalculateNavMeshPathAndCreateNodes(startPoint.transform.position, endPoint.transform.position);
         int lastNodeId = -1;
         graphAsset.nodes = new Node[pathNodes.Count];
-        
         for (int i = 0; i < pathNodes.Count; i++)
         {
             int nodeId = i; // Example ID, assign as needed
@@ -141,13 +169,14 @@ public unsafe class S_RacingLineTool : MonoBehaviour
                     continue; // Skip default values
                 var neighborNode = graphAsset.GetNode(neighborId);
 
-                    // Set a color for the edges
-                    Gizmos.color = Color.green;
+                // Set a color for the edges
+                Gizmos.color = Color.green;
 
-                    // Draw a line from this node to its neighbor
-                    Gizmos.DrawLine(node.Position.ToUnityVector3(), neighborNode.Position.ToUnityVector3());
-                
+                // Draw a line from this node to its neighbor
+                Gizmos.DrawLine(node.Position.ToUnityVector3(), neighborNode.Position.ToUnityVector3());
             }
         }
     }
 }
+
+#endif

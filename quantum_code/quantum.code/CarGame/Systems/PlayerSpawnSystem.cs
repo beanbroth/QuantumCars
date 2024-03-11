@@ -20,9 +20,6 @@ namespace Quantum.Game
                 Player = player,
             };
             frame.Add(entity, playerLink);
-
-            // The position is now set within the SpawnSystem, so this code is not needed anymore.
-            // If you still need to apply additional position offset based on player ID, you can do it here.
         }
     }
 }

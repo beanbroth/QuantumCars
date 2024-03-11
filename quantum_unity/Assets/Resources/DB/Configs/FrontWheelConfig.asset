@@ -89,4 +89,4 @@ MonoBehaviour:
         TangentModeLeft: 1
         TangentModeRight: 1
     tireMass:
-      RawValue: 65536
+      RawValue: 131072
