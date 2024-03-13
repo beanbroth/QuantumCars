@@ -19,7 +19,7 @@ MonoBehaviour:
         Value: 4572399945747127961
     numWheels: 4
     rideHeight:
-      RawValue: 65536
+      RawValue: 36044
     wheelLocalPositions:
     - X:
         RawValue: -75366

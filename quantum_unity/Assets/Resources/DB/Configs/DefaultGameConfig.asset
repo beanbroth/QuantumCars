@@ -20,3 +20,15 @@ MonoBehaviour:
     CarPrototype:
       Id:
         Value: 2713639564366554777
+    SetupDuration:
+      RawValue: 6553
+    CountDownDuration:
+      RawValue: 6553
+    GamePlayDuration:
+      RawValue: 11796480
+    SuddenDeathDuration:
+      RawValue: 327680
+    RoundOverDuration:
+      RawValue: 6553
+    ResetDuration:
+      RawValue: 6553

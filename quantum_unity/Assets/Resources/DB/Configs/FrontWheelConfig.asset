@@ -24,44 +24,44 @@ MonoBehaviour:
     tireGripFactor:
       Samples:
       - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
-      - RawValue: 65536
+      - RawValue: 65182
+      - RawValue: 64906
+      - RawValue: 64689
+      - RawValue: 64512
+      - RawValue: 64357
+      - RawValue: 64206
+      - RawValue: 64040
+      - RawValue: 63841
+      - RawValue: 63589
+      - RawValue: 63267
+      - RawValue: 62857
+      - RawValue: 62339
+      - RawValue: 61696
+      - RawValue: 60909
+      - RawValue: 59959
+      - RawValue: 58812
+      - RawValue: 52312
+      - RawValue: 40056
+      - RawValue: 27476
+      - RawValue: 20000
+      - RawValue: 19291
+      - RawValue: 18976
+      - RawValue: 18711
+      - RawValue: 18488
+      - RawValue: 18298
+      - RawValue: 18134
+      - RawValue: 17987
+      - RawValue: 17849
+      - RawValue: 17712
+      - RawValue: 17567
+      - RawValue: 17406
+      - RawValue: 17221
       PreWrapMode: 0
       PostWrapMode: 0
       StartTime:
         RawValue: 0
       EndTime:
-        RawValue: 65536
+        RawValue: 65675
       Resolution: 32
       OriginalPreWrapMode: 8
       OriginalPostWrapMode: 8
@@ -71,22 +71,46 @@ MonoBehaviour:
         Value:
           RawValue: 65536
         InTangent:
-          RawValue: 0
+          RawValue: -12714
         OutTangent:
-          RawValue: 0
+          RawValue: -12714
         TangentMode: 0
-        TangentModeLeft: 1
-        TangentModeRight: 1
+        TangentModeLeft: 0
+        TangentModeRight: 0
       - Time:
-          RawValue: 65536
+          RawValue: 32729
         Value:
-          RawValue: 65536
+          RawValue: 58892
         InTangent:
-          RawValue: 0
+          RawValue: -38863
         OutTangent:
-          RawValue: 0
+          RawValue: -38863
         TangentMode: 0
-        TangentModeLeft: 1
-        TangentModeRight: 1
+        TangentModeLeft: 0
+        TangentModeRight: 0
+      - Time:
+          RawValue: 41546
+        Value:
+          RawValue: 19568
+        InTangent:
+          RawValue: -12437
+        OutTangent:
+          RawValue: -12437
+        TangentMode: 0
+        TangentModeLeft: 0
+        TangentModeRight: 0
+      - Time:
+          RawValue: 65675
+        Value:
+          RawValue: 17221
+        InTangent:
+          RawValue: -6372
+        OutTangent:
+          RawValue: -14032
+        TangentMode: 0
+        TangentModeLeft: 2
+        TangentModeRight: 2
     tireMass:
-      RawValue: 131072
+      RawValue: 196608
+    tireRadius:
+      RawValue: 32768

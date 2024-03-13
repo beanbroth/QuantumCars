@@ -78,8 +78,8 @@
     <Compile Include="CarGame\AssetsAndConfigs\WheelControllerConfig.cs" />
     <Compile Include="CarGame\Components\AIController.cs" />
     <Compile Include="CarGame\Components\GameSessionManager.cs" />
-    <Compile Include="CarGame\Components\Node.cs" />
-    <Compile Include="CarGame\ConfigAssetsHelper.cs" />
+    <Compile Include="CarGame\Components\VehicleDamage.cs" />
+    <Compile Include="CarGame\ReferenceHelper.cs" />
     <Compile Include="CarGame\FrameTimer.cs" />
     <Compile Include="CarGame\Graph.cs" />
     <Compile Include="CarGame\HelperFunctions.cs" />
@@ -88,6 +88,7 @@
     <Compile Include="CarGame\Systems\LevelTriggersSystem.cs" />
     <Compile Include="CarGame\Systems\PlayerSteeringSystem.cs" />
     <Compile Include="CarGame\Systems\SpawnSystem.cs" />
+    <Compile Include="CarGame\Systems\VehicleCollisionSystem.cs" />
     <Compile Include="CarGame\Systems\VehiclePhysicsSystem.cs" />
     <Compile Include="CarGame\Components\VehicleController3D.cs" />
     <Compile Include="CommandSetup.User.cs" />
@@ -107,7 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CarGame\QTNs\Constants.qtn" />
-    <Content Include="CarGame\QTNs\Events.qtn" />
+    <Content Include="CarGame\QTNs\SignalsAndEvents.qtn" />
     <Content Include="CarGame\QTNs\Game.qtn" />
     <Content Include="CarGame\QTNs\Input.qtn" />
     <Content Include="CarGame\QTNs\Player.qtn" />

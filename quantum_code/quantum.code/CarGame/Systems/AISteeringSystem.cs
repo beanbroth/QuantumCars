@@ -21,7 +21,7 @@ public unsafe class AISteeringSystem : SystemMainThreadFilter<AISteeringSystem.F
 
         if (filter.AIController->ReachedNode(filter.Transform3D))
         {
-            filter.AIController->SetCurrentNode(ConfigAssetsHelper.GetAINavigationGraph(f));
+            filter.AIController->SetCurrentNode(ReferenceHelper.GetAINavigationGraph(f));
         }
         
         

@@ -16,8 +16,14 @@ Reset
 singleton component GameSessionManager
 {
     [HideInInspector] GameState CurrentGameState;
+        [HideInInspector] GameState PendingGameState;
     asset_ref<GameConfig> fallbackGameConfig;
-    [HideInInspector] FrameTimer suddenDeathTimer;
+    [HideInInspector] FrameTimer stateChangeTimer;
+}
+
+global 
+{
+    int MapIndex;
 }
 
 struct FrameTimer

@@ -34,6 +34,8 @@ namespace Quantum
             {
                 ProcessWheel(frame, carPhysicsBody, transform, rigConfig, wheelConfigs[i], i);
             }
+            
+            Velocity = carPhysicsBody->Velocity;
         }
 
         private void ProcessWheel(FrameBase frame, PhysicsBody3D* carPhysicsBody, Transform3D* transform,
@@ -41,14 +43,29 @@ namespace Quantum
         {
             FPVector3 wheelLocalPosition = rigConfig.wheelLocalPositions[wheelIndex];
             FPVector3 wheelWorldPosition = transform->Position + transform->Rotation * wheelLocalPosition;
-            var tireHit = frame.Physics3D.Raycast(wheelWorldPosition, FPVector3.Down, rigConfig.rideHeight, -1,
-                QueryOptions.HitStatics);
-            if (!tireHit.HasValue)
-                return;
-            ApplySuspensionForces(carPhysicsBody, transform, rigConfig, wheelConfig, tireHit.Value, wheelIndex);
-            ApplyTireShearForces(frame, carPhysicsBody, transform, rigConfig, wheelConfig, tireHit.Value, wheelIndex);
-            ApplyEngineForces(carPhysicsBody, transform, rigConfig, wheelConfig, tireHit.Value, wheelIndex);
+            var tireRadius = wheelConfig.tireRadius; // Added tire radius parameter
+
+            // Increase raycast length by the tire radius
+            var raycastLength = rigConfig.rideHeight + tireRadius;
+    
+            var tireHit = frame.Physics3D.Raycast(wheelWorldPosition, FPVector3.Down, raycastLength, -1, QueryOptions.HitStatics);
+
+            WheelInfos[wheelIndex].TireAngle = rigConfig.wheelIsSteering[wheelIndex] ? SteeringAngle : 0;
+            
+            if (tireHit.HasValue)
+            {
+                WheelInfos[wheelIndex].IsGrounded = true;
+                ApplySuspensionForces(carPhysicsBody, transform, rigConfig, wheelConfig, tireHit.Value, wheelIndex);
+                ApplyTireShearForces(frame, carPhysicsBody, transform, rigConfig, wheelConfig, tireHit.Value, wheelIndex);
+                ApplyEngineForces(carPhysicsBody, transform, rigConfig, wheelConfig, tireHit.Value, wheelIndex);
+            }
+            else
+            {
+                WheelInfos[wheelIndex].IsGrounded = false;
+                WheelInfos[wheelIndex].LocalHitPoint = FPVector3.Zero;
+            }
         }
+
 
         private void ApplyTireShearForces(FrameBase frame, PhysicsBody3D* carPhysicsBody, Transform3D* transform,
             VehicleController3DConfig rigConfig, WheelControllerConfig wheelConfig, Hit3D tireHit, int wheelIndex)
@@ -71,6 +88,7 @@ namespace Quantum
 
             FPVector3 tireWorldVel = carPhysicsBody->GetPointVelocity(wheelWorldPosition, transform);
             FP steeringVel = FPVector3.Dot(steeringDirection, tireWorldVel);
+            
             FP desiredVelChange = -steeringVel * wheelConfig.tireGripFactor.Evaluate(FPMath.Abs(steeringVel));
             FP desiredAccel = desiredVelChange / frame.DeltaTime;
             carPhysicsBody->AddForceAtPosition(steeringDirection * (wheelConfig.tireMass * desiredAccel),
@@ -95,20 +113,28 @@ namespace Quantum
         {
             var springStrength = wheelConfig.springStrength;
             var springDamper = wheelConfig.springDamper;
-            var rideHeight = rigConfig.rideHeight;
+            var tireRadius = wheelConfig.tireRadius; // Added tire radius parameter
+            var rideHeight = rigConfig.rideHeight + tireRadius; // Adjusting rideHeight based on tire radius
+
             FPVector3 wheelLocalPosition = rigConfig.wheelLocalPositions[wheelIndex];
             FPVector3 wheelWorldPosition = transform->Position + transform->Rotation * wheelLocalPosition;
             FPVector3 springDirection = transform->Up;
             FPVector3 tireWorldVel = carPhysicsBody->GetPointVelocity(wheelWorldPosition, transform);
+
+            WheelInfos[wheelIndex].LocalHitPoint = transform->InverseTransformPoint(tireHit.Point);
+
             FP offset = rideHeight - tireHit.CastDistanceNormalized * rideHeight;
             FP vel = FPVector3.Dot(tireWorldVel, springDirection);
             FP springForce = (offset * springStrength) - (vel * springDamper);
             carPhysicsBody->AddForceAtPosition(springDirection * springForce, wheelWorldPosition, transform);
         }
 
+
         private void ApplyEngineForces(PhysicsBody3D* carPhysicsBody, Transform3D* transform,
             VehicleController3DConfig rigConfig, WheelControllerConfig wheelConfig, Hit3D tireHit, int wheelIndex)
         {
+            if(!rigConfig.wheelIsPowered[wheelIndex])
+                return;
             FPVector3 wheelWorldPosition =
                 transform->Position + transform->Rotation * rigConfig.wheelLocalPositions[wheelIndex];
             FPVector3 accelDirection = transform->Forward;

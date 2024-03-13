@@ -10,19 +10,45 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged, 
 {
     public void OnPlayerDataSet(Frame frame, PlayerRef player)
     {
-        var data = frame.GetPlayerData(player);
+        //FindValidTargetAndAttachPlayer(frame, player);
+    }
 
-        // Resolve the reference to the avatar prototype.
-        var prototype = frame.FindAsset<EntityPrototype>(data.CharacterPrototype.Id);
+    private void AttachAllPlayersToVehicles(Frame frame)
+    {
+        for (int i = 0; i < frame.PlayerCount; i++)
+        {
+            PlayerRef? player = frame.ActorIdToFirstPlayer(i);
+            if (player == null)
+            {
+                //Log.Error("Player not found when respawning " + i);
+            }
+            else
+            {
+                Log.Debug("Attaching player " + player.Value);
+                FindValidTargetAndAttachPlayer(frame, player.Value);
+            }
+        }
+    }
+
+    private void FindValidTargetAndAttachPlayer(Frame frame, PlayerRef player)
+    {
         ComponentSet componentSet = new ComponentSet();
         componentSet.Add<PlayerLink>();
         var aiFilter = frame.Filter<VehicleController3D>(componentSet);
-        aiFilter.Next(out var entity, out var vehicleController);
-        frame.Remove<AIController>(entity);
-
-        //When a player joins, use a filter to find a vehicle controller and add a player link to the entity
-        var playerLink = new PlayerLink() { Player = player, };
-        frame.Add(entity, playerLink);
+        
+        if (aiFilter.Next(out var entity, out var vehicleController))
+        {
+            frame.Remove<AIController>(entity);
+            var playerLink = new PlayerLink() { Player = player };
+            frame.Add(entity, playerLink);
+            
+            frame.Events.PlayerAttachedToVehicleEvent(player);
+        }
+        else
+        {
+            Log.Error("No valid vehicle found for player " + player);
+            
+        }
     }
 
     private static void MoveEntityToSpawnPoint(Frame f, EntityRef entityRef, int spawnPointIndex)
@@ -44,15 +70,32 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged, 
         {
             case GameState.Setup:
                 SpawnAllAI(f);
+                AttachAllPlayersToVehicles(f);
                 break;
             case GameState.GamePlay:
             case GameState.RoundOver:
                 break;
             case GameState.Reset:
                 CleanUpAllDynamicEntities(f);
+                f.Map = GetNextMap(f);
                 break;
         }
     }
+
+    public Map GetNextMap(Frame f)
+    {
+        // Get the current map using the current index
+        var currentMap = f.FindAsset<Map>(f.RuntimeConfig.GameMaps[f.Global->MapIndex].Id);
+
+        Log.Debug("Next map: " + f.Global->MapIndex);
+        
+        // Increment the map index and use modulo to ensure it stays within array bounds
+        f.Global->MapIndex = (f.Global->MapIndex + 1) % f.RuntimeConfig.GameMaps.Length;
+
+        // Return the current map
+        return currentMap;
+    }
+
 
     private void CleanUpAllDynamicEntities(Frame frame)
     {
@@ -60,19 +103,19 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged, 
         frame.GetAllEntityRefs(allEntities);
         foreach (EntityRef entity in allEntities)
         {
-            if(frame.Has<GameSessionManager>(entity))
+            if (frame.Has<GameSessionManager>(entity))
                 continue;
+            // if (frame.Has<PlayerLink>(entity))
+            //     continue;
             if (!frame.Exists(entity))
                 continue;
             frame.Destroy(entity);
         }
-
-        frame.GetSingleton<GameSessionManager>().ChangeGameState(frame, GameState.Setup);
     }
 
     private void SpawnAllAI(Frame frame)
     {
-        AssetGuid prototypeID = ConfigAssetsHelper.GetGameConfig(frame).CarPrototype.Id;
+        AssetGuid prototypeID = ReferenceHelper.GetGameConfig(frame).CarPrototype.Id;
         var spawnPointIndex = 0; // Initialize a spawn point index
         var data = frame.FindAsset<MapCustomData>(frame.Map.UserAsset);
         for (spawnPointIndex = 0;
@@ -80,7 +123,7 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged, 
              spawnPointIndex++) // Replace SOME_DEFINED_LIMIT with the actual limit
         {
             EntityRef aiCar = SpawnFromPrototype(frame, frame.FindAsset<EntityPrototype>(prototypeID), spawnPointIndex);
-            var mapAIGraph = ConfigAssetsHelper.GetAINavigationGraph(frame);
+            var mapAIGraph = ReferenceHelper.GetAINavigationGraph(frame);
             var aiController = new AIController()
             {
                 CurrentNode = mapAIGraph.GetNode(mapAIGraph.nodes[0].Neighbors[0]), NodeReachedDistance = 50

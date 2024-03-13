@@ -23,6 +23,10 @@ namespace Quantum
             "Mass of each tire, used in force calculations. Change this for more grip, without changing the grip curve")]
         public FP tireMass = 2;
 
+        [Tooltip(
+            "Radius of the tire, used in force calculations")]
+        public FP tireRadius = FP._0_50;
+        
        
     }
 }

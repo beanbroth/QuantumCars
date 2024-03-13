@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Quantum
 {
-    unsafe public class ConfigAssetsHelper
+    unsafe public class ReferenceHelper
     {
         public static GameConfig GetGameConfig(Frame f)
         {
@@ -31,6 +31,11 @@ namespace Quantum
         public static Graph GetAINavigationGraph(Frame f)
         {
             return f.FindAsset<Graph>(GetMapCustomData(f).AINavigationGraph.Id);
+        }
+
+        public static GameSessionManager* GetGameSessionManager(Frame f)
+        {
+            return f.Unsafe.GetPointerSingleton<GameSessionManager>();
         }
     }
 }

@@ -406,33 +406,3 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - AIController: []
-    FinishLine: []
-    GameSessionManager:
-    - CurrentGameState:
-        Value: 1
-      fallbackGameConfig:
-        Id:
-          Value: 1447335239002490440
-      suddenDeathTimer:
-        _frame: 0
-    PlayerLink: []
-    VehicleController3D: []
-    CharacterController2D: []
-    CharacterController3D: []
-    NavMeshAvoidanceAgent: []
-    NavMeshAvoidanceObstacle: []
-    NavMeshPathfinder: []
-    NavMeshSteeringAgent: []
-    PhysicsBody2D: []
-    PhysicsBody3D: []
-    PhysicsCollider2D: []
-    PhysicsCollider3D: []
-    PhysicsCallbacks2D: []
-    PhysicsCallbacks3D: []
-    Transform2D: []
-    Transform2DVertical: []
-    Transform3D: []
-    View: []
-    PhysicsJoints2D: []
-    PhysicsJoints3D: []

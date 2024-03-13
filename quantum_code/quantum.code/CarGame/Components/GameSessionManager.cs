@@ -5,7 +5,34 @@ namespace Quantum;
 
 public unsafe partial struct GameSessionManager : IComponent
 {
-    public void ChangeGameState(Frame f, GameState newState)
+    public void ChangeGameState(Frame f, GameState newState, bool withDelay = false)
+    {
+        if(!f.IsVerified)
+            return;
+        if (withDelay)
+        {
+            // Start the timer with the delay duration based on the state
+            var delayDuration = ReferenceHelper.GetGameConfig(f).GetStateDuration(newState);
+            stateChangeTimer = FrameTimer.CreateFromSeconds(f, delayDuration);
+            // Store the intended state to transition after the delay
+            PendingGameState = newState;
+        }
+        else
+        {
+            // Immediate state transition
+            UpdateGameState(f, newState);
+        }
+    }
+
+    private void UpdateGameState(Frame f, GameState newState)
+    {
+        CurrentGameState = newState;
+        Log.Debug("GameSessionManager.ChangeGameState: " + newState.ToString());
+        f.Signals.OnGameStateChanged(newState);
+        HandleStateChange(f, newState);
+    }
+
+    private void HandleStateChange(Frame f, GameState newState)
     {
         switch (newState)
         {
@@ -27,16 +54,28 @@ public unsafe partial struct GameSessionManager : IComponent
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
+    }
 
-        CurrentGameState = newState;
-        Log.Debug("GameSessionManager.ChangeGameState: " + newState.ToString());
-        f.Signals.OnGameStateChanged(newState);
+    public void CheckStateChangeTimer(Frame f)
+    {
+        if(!f.IsVerified)
+            return;
+        if (stateChangeTimer.CheckAndStopIfExpired(f))
+        {
+            UpdateGameState(f, PendingGameState);
+        }
+    } 
+
+    public void ChangeGameStateIfStateIsNew(Frame f, GameState newState)
+    {
+        if (CurrentGameState == newState)
+            return;
+        ChangeGameState(f, newState);
     }
 
     private void HandleReset(Frame f)
     {
-        f.Map = f.FindAsset<Map>(f.RuntimeConfig.GameMaps[0].Id);
-
+        ChangeGameState(f, GameState.Setup, true);
     }
 
     private void HandleRoundOver(Frame f)
@@ -44,20 +83,8 @@ public unsafe partial struct GameSessionManager : IComponent
         ChangeGameState(f, GameState.Reset);
     }
 
-    private void HandleSuddenDeath(Frame frame)
+    private void HandleSuddenDeath(Frame f)
     {
-        suddenDeathTimer =
-            FrameTimer.CreateFromSeconds(frame, ConfigAssetsHelper.GetGameConfig(frame).SuddenDeathDuration);
-    }
-
-    public void CheckSuddenDeathTimer(Frame frame)
-    {
-        if (CurrentGameState != GameState.SuddenDeath)
-            return;
-        Log.Debug("GameSessionManager.CheckSuddenDeathTimer: " + suddenDeathTimer.RemainingTime(frame).ToString());
-        if (suddenDeathTimer.CheckAndStopIfExpired(frame))
-        {
-            ChangeGameState(frame, GameState.RoundOver);
-        }
+        ChangeGameState(f, GameState.RoundOver, true);
     }
 }

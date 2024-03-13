@@ -2,7 +2,7 @@ using Quantum;
 
 namespace Quantum;
 
-public class LevelTriggerSystem : SystemSignalsOnly, ISignalOnTriggerEnter3D
+public unsafe class LevelTriggerSystem : SystemSignalsOnly, ISignalOnTriggerEnter3D
 {
     public void OnTriggerEnter3D(Frame f, TriggerInfo3D info)
     {
@@ -16,12 +16,7 @@ public class LevelTriggerSystem : SystemSignalsOnly, ISignalOnTriggerEnter3D
         {
             f.Destroy(info.Other);
         }
-
-        //if game state is not currently in sudden death, change to sudden death
-        Log.Debug(f.GetSingleton<GameSessionManager>().CurrentGameState.ToString() );
-        if (f.GetSingleton<GameSessionManager>().CurrentGameState != GameState.SuddenDeath)
-        {
-            f.GetSingleton<GameSessionManager>().ChangeGameState(f, GameState.SuddenDeath);
-        }
+        
+        ReferenceHelper.GetGameSessionManager(f)->ChangeGameStateIfStateIsNew(f, GameState.SuddenDeath);
     }
 }

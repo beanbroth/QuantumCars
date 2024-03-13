@@ -4749,6 +4749,11 @@ MonoBehaviour:
     GameConfig:
       Id:
         Value: 1447335239002490440
+    GameMaps:
+    - Id:
+        Value: 3202445440943856205
+    - Id:
+        Value: 1150127842328963229
 --- !u!224 &833318423
 RectTransform:
   m_ObjectHideFlags: 0

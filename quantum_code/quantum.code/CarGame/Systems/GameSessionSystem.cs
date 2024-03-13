@@ -6,18 +6,18 @@ namespace Quantum;
 public unsafe class GameSessionSystem : SystemMainThread, ISignalOnMapChanged
 {
     public override void OnInit(Frame f)
-    {
+    { 
         f.GetOrAddSingleton<GameSessionManager>();
-        
-        GameSessionManager* gameSession = f.Unsafe.GetPointerSingleton<GameSessionManager>();
+
+        GameSessionManager* gameSession = ReferenceHelper.GetGameSessionManager(f);
         if (gameSession == null)
         {
             Log.Error("GameSessionSystem.Update: GameSession is null");
             return;
         }
 
-       // gameSession->CurrentGameState = GameState.CountDown;
-        gameSession->ChangeGameState(f, GameState.CountDown);
+        f.Global->MapIndex = 0;
+        gameSession->ChangeGameState(f, GameState.Setup, true);
         Log.Debug("GameSessionSystem.OnInit");
     }
 
@@ -30,7 +30,7 @@ public unsafe class GameSessionSystem : SystemMainThread, ISignalOnMapChanged
                 return;
             }
             
-            gameSession->CheckSuddenDeathTimer(f);
+            gameSession->CheckStateChangeTimer(f);
     }
 
     public void OnMapChanged(Frame f, AssetRefMap previousMap)

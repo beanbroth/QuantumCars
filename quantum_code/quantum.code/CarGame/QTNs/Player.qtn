@@ -1,6 +1,15 @@
 asset WheelControllerConfig;
 asset VehicleController3DConfig;
 
+struct RuntimeWheelInfo
+{
+    bool IsGrounded;
+    bool IsDrifting;
+    FP TireAngle;
+    FPVector3 LocalHitPoint;
+}
+
+
 component VehicleController3D
 {
     asset_ref<VehicleController3DConfig> RigConfig;
@@ -9,8 +18,16 @@ component VehicleController3D
     //runtime data
 
     [ReadOnly]  FP Throttle;
-    [ReadOnly] FP Velocity;
+    [ReadOnly] FPVector3 Velocity;
     [ReadOnly] FP SteeringAngle;
+    
+     array<RuntimeWheelInfo>[4] WheelInfos;
+}
+
+component VehicleDamage
+{
+    FP Health;
+    FP MaxHealth;
 }
 
 component PlayerLink
