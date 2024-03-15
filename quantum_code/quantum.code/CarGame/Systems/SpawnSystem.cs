@@ -17,15 +17,16 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged, 
     {
         for (int i = 0; i < frame.PlayerCount; i++)
         {
-            PlayerRef? player = frame.ActorIdToFirstPlayer(i);
-            if (player == null)
+            PlayerRef player = i;
+
+            if (player.IsValid)
             {
                 //Log.Error("Player not found when respawning " + i);
             }
             else
             {
-                Log.Debug("Attaching player " + player.Value);
-                FindValidTargetAndAttachPlayer(frame, player.Value);
+                Log.Debug("Attaching player " + player);
+                FindValidTargetAndAttachPlayer(frame, player);
             }
         }
     }

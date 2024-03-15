@@ -37,11 +37,795 @@ MonoBehaviour:
     SpawnPoints:
     - Position:
         X:
-          RawValue: -262144
+          RawValue: 2686976
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 35323904
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 2686976
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34668544
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 2686976
         Y:
           RawValue: 51773
         Z:
           RawValue: 34013184
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 2686976
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 33357824
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 2686976
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 32702464
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 2031616
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 35323904
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 2031616
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34668544
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 2031616
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34013184
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 2031616
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 33357824
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 2031616
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 32702464
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 1376256
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 35323904
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 1376256
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34668544
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 1376256
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34013184
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 1376256
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 33357824
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 1376256
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 32702464
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 720896
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 35323904
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 720896
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34668544
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 720896
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34013184
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 720896
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 33357824
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 720896
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 32702464
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 65536
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 35323904
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 65536
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34668544
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 65536
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34013184
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 65536
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 33357824
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: 65536
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 32702464
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -589824
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 35323904
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -589824
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34668544
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -589824
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34013184
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -589824
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 33357824
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -589824
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 32702464
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -1245184
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 35323904
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -1245184
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34668544
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -1245184
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34013184
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -1245184
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 33357824
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -1245184
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 32702464
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -1900544
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 35323904
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -1900544
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34668544
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -1900544
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34013184
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -1900544
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 33357824
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -1900544
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 32702464
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -2555904
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 35323904
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -2555904
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34668544
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -2555904
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34013184
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -2555904
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 33357824
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -2555904
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 32702464
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -3211264
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 35323904
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -3211264
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34668544
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -3211264
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 34013184
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -3211264
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 33357824
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+    - Position:
+        X:
+          RawValue: -3211264
+        Y:
+          RawValue: 51773
+        Z:
+          RawValue: 32702464
       Rotation:
         X:
           RawValue: 0

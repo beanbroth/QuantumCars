@@ -52,7 +52,7 @@ MonoBehaviour:
     maxTorque:
       RawValue: 19660800
     maxSpeed:
-      RawValue: 2293760
+      RawValue: 3276800
     speedTorqueCurve:
       Samples:
       - RawValue: 65536
