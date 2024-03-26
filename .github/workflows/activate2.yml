@@ -58,7 +58,6 @@ jobs:
           targetPlatform: StandaloneWindows # Adjust the target platform as needed
 
       - name: Upload Unity Build Artifact
-      # Output
       - uses: actions/upload-artifact@v3
         with:
           name: Build
