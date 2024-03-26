@@ -80,6 +80,6 @@ nuget.config
 # Add quantum pdb files to version control
 !Assets/Photon/Quantum/Assemblies/*.pdb*
 # Uncomment the following lines to ignore the compiled quantum code. IMPORTANT: This means every team member who uses the repository will have to build the quantum dlls once after each pull to have the project in working order.
-#Assets/Photon/Quantum/Assemblies/PhotonDeterministic.*
-#Assets/Photon/Quantum/Assemblies/quantum.core.*
-#Assets/Photon/Quantum/Assemblies/quantum.code.*
+Assets/Photon/Quantum/Assemblies/PhotonDeterministic.*
+Assets/Photon/Quantum/Assemblies/quantum.core.*
+Assets/Photon/Quantum/Assemblies/quantum.code.*
