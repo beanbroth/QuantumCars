@@ -16,7 +16,7 @@ jobs:
 
       # Build C# Project
       - name: Build C# Project
-        run: dotnet build ./quantum_code/quantum_code/quantum_code.csproj
+        run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj
 
       # Cache for Unity
       - uses: actions/cache@v3
