@@ -1,8 +1,44 @@
-            - name: Unity - Activate
-  # You may pin to the exact commit or the version.
-  # uses: game-ci/unity-activate@33cd3ea96f11f3a1ddcf8fa9d8d265d5ea81e240
-  uses: game-ci/unity-activate@v2.0.0
-  with:
-    # Version of unity to use for building the project.
-    unityVersion: # optional, default is 2019.2.11f1
-          
+name: Actions 😎
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build my project ✨
+    runs-on: windows-latest
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # Build C# Project
+      - name: Build C# Project
+        run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
+
+      # Cache for Unity
+      - uses: actions/cache@v3
+        with:
+          path: ./quantum_unity/Library
+          key: Library-${{ hashFiles('./quantum_unity/Assets/**', './quantum_unity/Packages/**', './quantum_unity/ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # Build Unity Project
+      - name: Build Unity Project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: ./quantum_unity
+          targetPlatform: WebGL
+
+      # Output
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build
+          path: build
