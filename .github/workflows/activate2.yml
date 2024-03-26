@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          lfs: true
 
       - name: Build C# Project
         run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
@@ -29,8 +27,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          lfs: true
 
       - name: Download Photon Folder
         uses: actions/download-artifact@v3
@@ -38,7 +34,6 @@ jobs:
           name: photon-assets
           path: quantum_unity/Assets/Photon
 
-      # The rest of your Unity build steps
       - name: Cache for Unity
         uses: actions/cache@v3
         with:
@@ -58,7 +53,7 @@ jobs:
           targetPlatform: StandaloneWindows # Adjust the target platform as needed
 
       - name: Upload Unity Build Artifact
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
-          name: Build
-          path: build
+          name: Unity-Build
+          path: AutoBuild
