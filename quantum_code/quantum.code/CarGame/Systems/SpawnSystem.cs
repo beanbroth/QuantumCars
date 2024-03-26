@@ -18,9 +18,9 @@ public unsafe class SpawnSystem : SystemSignalsOnly, ISignalOnGameStateChanged, 
         for (int i = 0; i < frame.PlayerCount; i++)
         {
             PlayerRef player = i;
-            if (!player.IsValid)
+            if (!player.IsValid || frame.GetPlayerInputFlags(player) == DeterministicInputFlags.PlayerNotPresent)
             {
-                Log.Error("Player not found when respawning " + i);
+                //Log.Error("Player not found when respawning " + i);
             }
             else
             {
