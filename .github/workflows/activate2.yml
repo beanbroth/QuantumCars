@@ -15,7 +15,7 @@ jobs:
         run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
 
       - name: Archive Photon Folder
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: photon-assets
           path: quantum_unity/Assets/Photon
@@ -39,7 +39,7 @@ jobs:
           lfs: true
   
       - name: Download Photon Folder
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: photon-assets
           path: quantum_unity/Assets/Photon
@@ -63,10 +63,11 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
+          allowDirtyBuild: true
           projectPath: ./quantum_unity
   
       - name: Upload Unity Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
