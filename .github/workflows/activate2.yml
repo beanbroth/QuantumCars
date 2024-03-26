@@ -1,32 +1,47 @@
-name: Actions 😎
+name: Build and Deploy
 
 on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build my project ✨
-    runs-on: ubuntu-latest
+  build-dotnet:
+    name: Build .NET Project on Windows
+    runs-on: windows-latest
     steps:
-      # Checkout
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          lfs: true
 
-      # Build C# Project
       - name: Build C# Project
         run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
 
-      # Cache for Unity
-      - uses: actions/cache@v3
+      - name: Archive Photon Folder
+        uses: actions/upload-artifact@v3
+        with:
+          name: photon-assets
+          path: quantum_unity/Assets/Photon
+
+  build-unity:
+    name: Build Unity Project on Ubuntu
+    needs: build-dotnet
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Download Photon Folder
+        uses: actions/download-artifact@v3
+        with:
+          name: photon-assets
+          path: quantum_unity/Assets/Photon
+
+      - name: Cache for Unity
+        uses: actions/cache@v3
         with:
           path: ./quantum_unity/Library
           key: Library-${{ hashFiles('./quantum_unity/Assets/**', './quantum_unity/Packages/**', './quantum_unity/ProjectSettings/**') }}
           restore-keys: |
             Library-
 
-      # Build Unity Project
       - name: Build Unity Project
         uses: game-ci/unity-builder@v4
         env:
@@ -34,11 +49,12 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
+          allowDirtyBuild: true
           projectPath: ./quantum_unity
-          targetPlatform: StandaloneWindows64
+          targetPlatform: StandaloneWindows # Adjust the target platform as needed
 
-      # Output
-      - uses: actions/upload-artifact@v3
+      - name: Upload Unity Build Artifact
+        uses: actions/upload-artifact@v3
         with:
-          name: Build
-          path: build
+          name: Unity-Build
+          path: AutoBuild
