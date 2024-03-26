@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Build my project ✨
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       # Checkout
       - name: Checkout repository
@@ -35,7 +35,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           projectPath: ./quantum_unity
-          targetPlatform: WebGL
+          targetPlatform: StandaloneWindows64
 
       # Output
       - uses: actions/upload-artifact@v3
