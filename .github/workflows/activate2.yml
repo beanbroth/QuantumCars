@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Build my project ✨
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       # Checkout
       - name: Checkout repository
@@ -16,7 +16,7 @@ jobs:
 
       # Build C# Project
       - name: Build C# Project
-        run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj
+        run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
 
       # Cache for Unity
       - uses: actions/cache@v3
