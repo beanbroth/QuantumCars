@@ -46,6 +46,11 @@ MonoBehaviour:
         Id:
           Value: 579438116320728519
       ResourcePath: DB/LevelData/Level2/Level2_map_mesh
+    - Path: Resources/DB/LevelData/Level3/Level3_map_mesh
+      AssetRef:
+        Id:
+          Value: 654742562806016496
+      ResourcePath: DB/LevelData/Level3/Level3_map_mesh
     - Path: Resources/DB/VehicleControllerEntity|EntityView
       AssetRef:
         Id:
@@ -76,11 +81,6 @@ MonoBehaviour:
         Id:
           Value: 1627738664439089070
       ResourcePath: DB/Map1_navigationGraph
-    - Path: Resources/DB/LevelData/Level3/Level3_map_mesh
-      AssetRef:
-        Id:
-          Value: 1657202258875901136
-      ResourcePath: DB/LevelData/Level3/Level3_map_mesh
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
