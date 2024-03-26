@@ -14,22 +14,27 @@ jobs:
         with:
           lfs: true
 
-      # Cache
+      # Build C# Project
+      - name: Build C# Project
+        run: dotnet build ./quantum_code/quantum_code/quantum_code.csproj
+
+      # Cache for Unity
       - uses: actions/cache@v3
         with:
-          path: Library
-          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          path: ./quantum_unity/Library
+          key: Library-${{ hashFiles('./quantum_unity/Assets/**', './quantum_unity/Packages/**', './quantum_unity/ProjectSettings/**') }}
           restore-keys: |
             Library-
 
-      # Build
-      - name: Build project
+      # Build Unity Project
+      - name: Build Unity Project
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
+          projectPath: ./quantum_unity
           targetPlatform: WebGL
 
       # Output
