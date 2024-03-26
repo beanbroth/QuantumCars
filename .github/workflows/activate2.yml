@@ -4,31 +4,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-dotnet:
-    name: Build .NET Project
-    runs-on: windows-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          lfs: false
-
-      - name: Build C# Project
-        run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
-
-      # You can add steps to upload build artifacts if needed
-
-  build-unity:
-    name: Build Unity Project
-    needs: build-dotnet
+  build:
+    name: Build my project ✨
     runs-on: ubuntu-latest
     steps:
-      # You can add steps to download build artifacts from the dotnet job if needed
-
+      # Checkout
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          lfs: false
+          lfs: true
+
+      # Build C# Project
+      - name: Build C# Project
+        run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
 
       # Cache for Unity
       - uses: actions/cache@v3
@@ -38,6 +26,7 @@ jobs:
           restore-keys: |
             Library-
 
+      # Build Unity Project
       - name: Build Unity Project
         uses: game-ci/unity-builder@v4
         env:
