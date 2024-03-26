@@ -13,11 +13,6 @@ jobs:
         with:
           lfs: false
 
-      - name: Setup .NET Framework
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '4.8' # Ensure .NET Framework 4.8 is used
-
       - name: Build C# Project
         run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
 
