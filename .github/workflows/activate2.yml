@@ -63,7 +63,6 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
-          allowDirtyBuild: true
           projectPath: ./quantum_unity
   
       - name: Upload Unity Build Artifact
@@ -71,3 +70,36 @@ jobs:
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
+
+      - name: Zip Build
+        run: |
+          zip -r "${{ secrets.PROJECT_NAME }}_${{ matrix.targetPlatform }}" "build/${{ matrix.targetPlatform }}/"
+      - name: upload to drive
+        uses: adityak74/google-drive-upload-git-action@main
+        with:
+          credentials: ${{ secrets.DRIVE_CREDENTIALS }}
+          filename: "${{ secrets.PROJECT_NAME }}_${{ matrix.targetPlatform }}.zip"
+          folderId: ${{ secrets.DRIVE_FOLDER_ID }}
+          overwrite: true
+          
+  # sendNotification:
+  #   name: Send notification
+  #   needs: buildForAllSupportedPlatforms
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: satak/webrequest-action@master
+  #       name: Send workflow's conclusion to SkyBrave Discord channel
+  #       with:
+  #         url: ${{ secrets.DISCORD_WEBHOOK }}
+  #         method: 'POST'
+  #         payload: '{"embeds": [{"title": "${{ secrets.PROJECT_NAME }} workflow action ${{ github.event.workflow_run.conclusion }}", "description" : "run_id: ${{ github.run_id }} action triggered by ${{ github.actor }}" , "color": 16753920, "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}]}'
+
+  clearArtifacts:
+    needs: buildForAllSupportedPlatforms
+    runs-on: ubuntu-latest
+    steps:
+      - name : Delete Artifacts 
+        uses : geekyeggo/delete-artifact@v4
+        with:
+            name: |
+              Build-*
