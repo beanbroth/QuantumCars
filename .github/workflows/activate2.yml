@@ -16,24 +16,29 @@ jobs:
       - name: Build C# Project
         run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
 
-      - name: Archive Entire Repository
+      - name: Archive Photon Folder
         uses: actions/upload-artifact@v3
         with:
-          name: repo-content
-          path: .
+          name: photon-assets
+          path: quantum_unity/Assets/Photon
 
   build-unity:
     name: Build Unity Project on Ubuntu
     needs: build-dotnet
     runs-on: ubuntu-latest
     steps:
-      - name: Download Entire Repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Download Photon Folder
         uses: actions/download-artifact@v3
         with:
-          name: repo-content
-          path: .
+          name: photon-assets
+          path: quantum_unity/Assets/Photon
 
-      # Here, add your steps for the Unity build process
+      # The rest of your Unity build steps
       - name: Cache for Unity
         uses: actions/cache@v3
         with:
@@ -53,7 +58,8 @@ jobs:
           targetPlatform: StandaloneWindows # Adjust the target platform as needed
 
       - name: Upload Unity Build Artifact
-        uses: actions/upload-artifact@v3
+      # Output
+      - uses: actions/upload-artifact@v3
         with:
-          name: Unity-Build
-          path: path/to/your/unity/build/output # Replace with the path to your Unity build output
+          name: Build
+          path: build
