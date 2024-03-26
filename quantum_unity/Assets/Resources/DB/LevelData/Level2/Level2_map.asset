@@ -20,9 +20,9 @@ MonoBehaviour:
     UserAsset:
       Id:
         Value: 3127807061822408940
-    Scene: Level2
-    ScenePath: Assets/Scenes/Level2.unity
-    SceneGuid: 60377a8a10328ba44b6c85c077f83bb9
+    Scene: 
+    ScenePath: 
+    SceneGuid: 
     WorldSize: 256
     BucketsCount: 16
     BucketsSubdivisions: 8

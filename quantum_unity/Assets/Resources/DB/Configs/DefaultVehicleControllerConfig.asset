@@ -50,7 +50,7 @@ MonoBehaviour:
     maxSteerAngle:
       RawValue: 1638400
     maxTorque:
-      RawValue: 19660800
+      RawValue: 26214400
     maxSpeed:
       RawValue: 3276800
     speedTorqueCurve:

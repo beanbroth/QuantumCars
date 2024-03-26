@@ -111,6 +111,6 @@ MonoBehaviour:
         TangentModeLeft: 2
         TangentModeRight: 2
     tireMass:
-      RawValue: 196608
+      RawValue: 262144
     tireRadius:
       RawValue: 32768

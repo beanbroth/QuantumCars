@@ -8,3 +8,11 @@ signal OnGameStateChanged(GameState NewState);
 synced event PlayerAttachedToVehicleEvent {
   PlayerRef Player;
 }
+
+event VehicleCollision 
+{
+    entity_ref Entity;
+    FPVector3 Normal;
+    FPVector3 Position;
+    FP ForceScale;
+}

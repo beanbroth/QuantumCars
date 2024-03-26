@@ -1,3 +1,4 @@
+com.beans.deform@1.2.1
 com.unity.ads@4.4.2
 com.unity.ai.navigation@1.1.5
 com.unity.analytics@3.8.1

@@ -4746,6 +4746,7 @@ MonoBehaviour:
     SimulationConfig:
       Id:
         Value: 0
+    AICount: 20
     GameConfig:
       Id:
         Value: 1447335239002490440

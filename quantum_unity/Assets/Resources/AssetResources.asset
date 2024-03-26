@@ -76,11 +76,21 @@ MonoBehaviour:
         Id:
           Value: 1627738664439089070
       ResourcePath: DB/Map1_navigationGraph
+    - Path: Resources/DB/LevelData/Level3/Level3_map_mesh
+      AssetRef:
+        Id:
+          Value: 1657202258875901136
+      ResourcePath: DB/LevelData/Level3/Level3_map_mesh
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/Map1
+    - Path: Resources/DB/LevelData/Level3/Level3_navigationGraph
+      AssetRef:
+        Id:
+          Value: 2254220642684469081
+      ResourcePath: DB/LevelData/Level3/Level3_navigationGraph
     - Path: Resources/DB/LevelData/Level2/Level2_navigationGraph
       AssetRef:
         Id:
@@ -111,11 +121,21 @@ MonoBehaviour:
         Id:
           Value: 3429740943684246675
       ResourcePath: DB/LevelData/Level1/Level1_map_mesh
+    - Path: Resources/DB/LevelData/Level3/Level3_customData
+      AssetRef:
+        Id:
+          Value: 3519469272140960732
+      ResourcePath: DB/LevelData/Level3/Level3_customData
     - Path: Resources/DB/Configs/FrontWheelConfig
       AssetRef:
         Id:
           Value: 4096052493333747310
       ResourcePath: DB/Configs/FrontWheelConfig
+    - Path: Resources/DB/LevelData/Level3/Level3_map
+      AssetRef:
+        Id:
+          Value: 4184948848048565409
+      ResourcePath: DB/LevelData/Level3/Level3_map
     - Path: Resources/DB/Configs/DefaultWheelConfig
       AssetRef:
         Id:
