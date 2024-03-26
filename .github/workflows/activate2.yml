@@ -56,5 +56,5 @@ jobs:
       - name: Upload Unity Build Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: Unity-Build
-          path: AutoBuild
+          name: Build
+          path: build
