@@ -24,14 +24,14 @@ jobs:
           commit_message=$(git log -1 --pretty=%B)
           echo "Commit message: $commit_message"
           if [[ $commit_message =~ ^[0-9] ]]; then
-            echo "::set-output name=run_next_jobs::true"
+            echo "run_next_jobs=true" >> $GITHUB_ENV
           else
-            echo "::set-output name=run_next_jobs::false"
+            echo "run_next_jobs=false" >> $GITHUB_ENV
           fi
-
+          
   build-dotnet:
     needs: check-commit-message
-    if: needs.check-commit-message.outputs.run_next_jobs == 'true'
+    if: ${{ env.run_next_jobs == 'true' }}
     name: Build .NET Project on Windows
     runs-on: windows-latest
     steps:
