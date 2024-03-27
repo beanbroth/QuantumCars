@@ -1,7 +1,10 @@
 name: Build and Deploy
-
 on:
   workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build-dotnet:
@@ -15,33 +18,46 @@ jobs:
         run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
 
       - name: Archive Photon Folder
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: photon-assets
           path: quantum_unity/Assets/Photon
 
-  build-unity:
-    name: Build Unity Project on Ubuntu
+  buildForAllSupportedPlatforms:
+    name: Build for ${{ matrix.targetPlatform }}
     needs: build-dotnet
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform:
+          #- StandaloneWindows64 # Build a Windows 64-bit standalone.
+          #- Android # Build an Android .apk standalone app.
+          - WebGL # WebGL.
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
+        with:
+          fetch-depth: 0
+          lfs: true
+  
       - name: Download Photon Folder
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: photon-assets
           path: quantum_unity/Assets/Photon
-
+  
       - name: Cache for Unity
         uses: actions/cache@v3
         with:
-          path: ./quantum_unity/Library
-          key: Library-${{ hashFiles('./quantum_unity/Assets/**', './quantum_unity/Packages/**', './quantum_unity/ProjectSettings/**') }}
-          restore-keys: |
-            Library-
-
+          path: quantum_unity/Library
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
+  
+      - if: matrix.targetPlatform == 'Android'
+        name: Check Free Disk Space
+        uses: jlumbroso/free-disk-space@v1.3.1
+  
       - name: Build Unity Project
         uses: game-ci/unity-builder@v4
         env:
@@ -50,11 +66,50 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           allowDirtyBuild: true
+          targetPlatform: ${{ matrix.targetPlatform }}
           projectPath: ./quantum_unity
-          targetPlatform: StandaloneWindows # Adjust the target platform as needed
-
+          
       - name: Upload Unity Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: Build
-          path: build
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
+
+      - if: matrix.targetPlatform == 'WebGL'
+        name: Deploy to GitHub Pages V1
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build/WebGL/WebGL
+          
+      - name: Zip Build
+        run: |
+          zip -r "${{ secrets.PROJECT_NAME }}_${{ matrix.targetPlatform }}" "build/${{ matrix.targetPlatform }}/"
+      - name: upload to drive
+        uses: adityak74/google-drive-upload-git-action@main
+        with:
+          credentials: ${{ secrets.DRIVE_CREDENTIALS }}
+          filename: "${{ secrets.PROJECT_NAME }}_${{ matrix.targetPlatform }}.zip"
+          folderId: ${{ secrets.DRIVE_FOLDER_ID }}
+          overwrite: true
+          
+  # sendNotification:
+  #   name: Send notification
+  #   needs: buildForAllSupportedPlatforms
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: satak/webrequest-action@master
+  #       name: Send workflow's conclusion to SkyBrave Discord channel
+  #       with:
+  #         url: ${{ secrets.DISCORD_WEBHOOK }}
+  #         method: 'POST'
+  #         payload: '{"embeds": [{"title": "${{ secrets.PROJECT_NAME }} workflow action ${{ github.event.workflow_run.conclusion }}", "description" : "run_id: ${{ github.run_id }} action triggered by ${{ github.actor }}" , "color": 16753920, "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}]}'
+
+  clearArtifacts:
+    needs: buildForAllSupportedPlatforms
+    runs-on: ubuntu-latest
+    steps:
+      - name : Delete Artifacts 
+        uses : geekyeggo/delete-artifact@v3
+        with:
+            name: |
+              Build-*
