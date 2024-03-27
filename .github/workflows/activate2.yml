@@ -55,8 +55,6 @@ jobs:
       - if: matrix.targetPlatform == 'Android'
         name: Check Free Disk Space
         uses: jlumbroso/free-disk-space@v1.3.1
-        with:
-          docker-images: false
   
       - name: Build Unity Project
         uses: game-ci/unity-builder@v4
