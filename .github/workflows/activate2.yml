@@ -1,6 +1,9 @@
 name: Build and Deploy
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 permissions:
   contents: write
   pages: write
@@ -14,14 +17,21 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Build C# Project
-        run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
+      - name: Check Commit Message
+        id: check-commit
+        run: |
+          commit_message=$(git log -1 --pretty=%B)
+          echo "Commit message: $commit_message"
+          if [[ $commit_message =~ ^[0-9] ]]; then
+            echo "Commit message starts with a number."
+            echo "::set-output name=should_build::true"
+          else
+            echo "::set-output name=should_build::false"
+          fi
 
-      - name: Archive Photon Folder
-        uses: actions/upload-artifact@v4
-        with:
-          name: photon-assets
-          path: quantum_unity/Assets/Photon
+      - if: steps.check-commit.outputs.should_build != 'true'
+        run: echo "Skipping build as commit message does not start with a number" && exit 0
+
 
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
