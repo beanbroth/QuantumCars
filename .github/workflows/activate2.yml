@@ -108,8 +108,9 @@ jobs:
     needs: buildForAllSupportedPlatforms
     runs-on: ubuntu-latest
     steps:
-      - name : Delete Artifacts 
-        uses : geekyeggo/delete-artifact@v3
+      - name: Delete Build Artifacts
+        uses: geekyeggo/delete-artifact@v5
         with:
-            name: |
-              Build-*
+          name: |
+            Build-*
+          failOnError: false
