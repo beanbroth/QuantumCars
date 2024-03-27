@@ -16,22 +16,23 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        
+
       - name: Check Commit Message
         id: check-commit
         run: |
           commit_message=$(git log -1 --pretty=%B)
           echo "Commit message: $commit_message"
+          echo "COMMIT_MESSAGE_STARTS_WITH_NUMBER=false" >> $GITHUB_ENV
           if [[ $commit_message =~ ^[0-9] ]]; then
             echo "Commit message starts with a number."
-            echo "::set-output name=should_build::true"
-          else
-            echo "::set-output name=should_build::false"
+            echo "COMMIT_MESSAGE_STARTS_WITH_NUMBER=true" >> $GITHUB_ENV
           fi
         shell: bash
 
-      - if: steps.check-commit.outputs.should_build != 'true'
-        run: echo "Skipping build as commit message does not start with a number" && exit 0
+      - if: env.COMMIT_MESSAGE_STARTS_WITH_NUMBER != 'true'
+        run: |
+          echo "Skipping build as commit message does not start with a number"
+        shell: bash
 
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
