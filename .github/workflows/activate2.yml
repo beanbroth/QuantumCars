@@ -1,7 +1,8 @@
 name: Build and Deploy
-
 on:
   workflow_dispatch:
+permissions:
+  contents: write
 
 jobs:
   build-dotnet:
@@ -28,8 +29,8 @@ jobs:
       fail-fast: false
       matrix:
         targetPlatform:
-          - StandaloneWindows64 # Build a Windows 64-bit standalone.
-          - Android # Build an Android .apk standalone app.
+          #- StandaloneWindows64 # Build a Windows 64-bit standalone.
+          #- Android # Build an Android .apk standalone app.
           - WebGL # WebGL.
     steps:
       - name: Checkout Repository
@@ -54,6 +55,8 @@ jobs:
       - if: matrix.targetPlatform == 'Android'
         name: Check Free Disk Space
         uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          docker-images: false
   
       - name: Build Unity Project
         uses: game-ci/unity-builder@v4
@@ -65,12 +68,18 @@ jobs:
           allowDirtyBuild: true
           targetPlatform: ${{ matrix.targetPlatform }}
           projectPath: ./quantum_unity
-  
+          
+      - if: matrix.targetPlatform == 'WebGL'
       - name: Upload Unity Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build/WebGL
 
       - name: Zip Build
         run: |
