@@ -80,6 +80,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build/WebGL
+          publish_dir: build/WebGL
 
       - name: Zip Build
         run: |
