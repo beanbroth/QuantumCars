@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
+        
       - name: Check Commit Message
         id: check-commit
         run: |
@@ -28,10 +28,10 @@ jobs:
           else
             echo "::set-output name=should_build::false"
           fi
+        shell: bash
 
       - if: steps.check-commit.outputs.should_build != 'true'
         run: echo "Skipping build as commit message does not start with a number" && exit 0
-
 
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
