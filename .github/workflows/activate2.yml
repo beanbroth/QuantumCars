@@ -31,7 +31,7 @@ jobs:
           
   build-dotnet:
     needs: check-commit-message
-    if: ${{ env.run_next_jobs == 'true' }}
+    if: ${{ GITHUB_ENV.run_next_jobs == 'true' }}
     name: Build .NET Project on Windows
     runs-on: windows-latest
     steps:
