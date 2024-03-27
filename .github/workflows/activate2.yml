@@ -76,11 +76,46 @@ jobs:
           path: build/${{ matrix.targetPlatform }}
 
       - if: matrix.targetPlatform == 'WebGL'
-        name: Deploy to GitHub Pages
+        name: Deploy to GitHub Pages V1
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build/WebGL/**
+          source_dir: build/WebGL
+          files: |
+            ./*
+            
+      - if: matrix.targetPlatform == 'WebGL'
+        name: Deploy to GitHub Pages V1
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          source_dir: build/WebGL
+          files: |
+            ./*
+      
+      - if: matrix.targetPlatform == 'WebGL'
+        name: Deploy to GitHub Pages V2
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          source_dir: build
+          files: |
+            ./WebGL/*
+      
+      - if: matrix.targetPlatform == 'WebGL'
+        name: Deploy to GitHub Pages V3
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          source_dir: build
+          files: |
+            ./*
+      
+      - if: matrix.targetPlatform == 'WebGL'
+        name: Deploy to GitHub Pages V4
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          source_dir: build
+          files: |
+            ./WebGL/*
 
+            
       - name: Zip Build
         run: |
           zip -r "${{ secrets.PROJECT_NAME }}_${{ matrix.targetPlatform }}" "build/${{ matrix.targetPlatform }}/"
