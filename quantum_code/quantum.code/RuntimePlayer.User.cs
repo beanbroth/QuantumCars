@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Quantum
 {
+    //test git changes
     partial class RuntimePlayer
     {
         public AssetRefEntityPrototype CharacterPrototype;
