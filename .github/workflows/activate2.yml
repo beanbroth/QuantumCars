@@ -109,7 +109,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : Delete Artifacts 
-        uses : geekyeggo/delete-artifact@v4
+        uses : geekyeggo/delete-artifact@v3
         with:
             name: |
               Build-*
