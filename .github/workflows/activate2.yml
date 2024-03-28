@@ -44,7 +44,7 @@ jobs:
 
       - name: Extract Version from Commit Message
         run: |
-          VERSION=$(git log -1 --pretty=format:%s | grep -oP '(?<=v)\d+\.\d+\.\d+')
+          VERSION=$(git log -1 --pretty=format:%s | grep -oP '^\d+\.\d+\.\d+')
           echo $VERSION > quantum_unity/Assets/Resources/version.txt
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
