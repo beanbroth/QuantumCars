@@ -4210,6 +4210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e787d4dc292e2042af0c36c50e47afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  versionText: {fileID: 1485623254}
+  fpsText: {fileID: 881373562}
 --- !u!1 &477182910
 GameObject:
   m_ObjectHideFlags: 0
@@ -6071,7 +6073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'FPS: 0.0.0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9156,7 +9158,7 @@ GameObject:
   - component: {fileID: 1485623255}
   - component: {fileID: 1485623254}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Version
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9201,7 +9203,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Version: ?.?.??'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
