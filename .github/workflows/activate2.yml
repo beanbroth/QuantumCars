@@ -13,20 +13,25 @@ jobs:
   check-commit-message:
     runs-on: ubuntu-latest
     outputs:
-      run_next_jobs: ${{ steps.check_commit_message.outputs.run_next_jobs }}
+      run_next_jobs: ${{ steps.set_run_next_jobs.outputs.run_next_jobs }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Check Commit Message
-        id: check_commit_message
+      - name: Set run_next_jobs for Manual Trigger
+        id: set_run_next_jobs
         run: |
-          commit_message=$(git log -1 --pretty=%B)
-          echo "Commit message: $commit_message"
-          if [[ $commit_message =~ ^[0-9] ]]; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "Workflow triggered manually, skipping commit message check."
             echo "run_next_jobs=true" >> $GITHUB_OUTPUT
           else
-            echo "run_next_jobs=false" >> $GITHUB_OUTPUT
+            commit_message=$(git log -1 --pretty=%B)
+            echo "Commit message: $commit_message"
+            if [[ $commit_message =~ ^[0-9] ]]; then
+              echo "run_next_jobs=true" >> $GITHUB_OUTPUT
+            else
+              echo "run_next_jobs=false" >> $GITHUB_OUTPUT
+            fi
           fi
 
   update-version-file:
