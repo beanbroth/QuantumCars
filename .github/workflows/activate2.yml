@@ -28,9 +28,27 @@ jobs:
           else
             echo "run_next_jobs=false" >> $GITHUB_OUTPUT
           fi
-          
-  build-dotnet:
+
+  update-version-file:
     needs: check-commit-message
+    if: needs.check-commit-message.outputs.run_next_jobs == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Extract Version from Commit Message
+        run: |
+          VERSION=$(git log -1 --pretty=format:%s | grep -oP '(?<=v)\d+\.\d+\.\d+')
+          echo $VERSION > quantum_unity/Assets/Resources/version.txt
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add quantum_unity/Assets/Resources/version.txt
+          git commit -m "Update version file to $VERSION"
+          git push
+
+  build-dotnet:
+    needs: update-version-file
     if: needs.check-commit-message.outputs.run_next_jobs == 'true'
     name: Build .NET Project on Windows
     runs-on: windows-latest
