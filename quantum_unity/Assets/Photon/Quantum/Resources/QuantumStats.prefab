@@ -594,7 +594,7 @@ MonoBehaviour:
   ToggleButtonText: {fileID: 114634862825597176}
   Toggles:
   - {fileID: 1556679508028596}
-  StartEnabled: 0
+  StartEnabled: 1
 --- !u!1 &1420271534696230
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class S_DebugStatsController : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad( gameObject);
         string version = Resources.Load<TextAsset>("version").text.Trim();
         versionText.text = "Version " + version;
     }
