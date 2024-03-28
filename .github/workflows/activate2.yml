@@ -54,6 +54,15 @@ jobs:
         run: |
           echo "Skipping build as commit message does not start with a number"
         shell: bash
+        
+      - name: Build C# Project
+        run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
+
+      - name: Archive Photon Folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: photon-assets
+          path: quantum_unity/Assets/Photon
 
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
