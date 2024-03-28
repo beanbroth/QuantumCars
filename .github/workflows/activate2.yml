@@ -27,56 +27,21 @@ jobs:
           else
             commit_message=$(git log -1 --pretty=%B)
             echo "Commit message: $commit_message"
-            if [[ $commit_message =~ ^[0-9] ]]; then
+            if [[ $commit_message =~ "[Build]" ]]; then
               echo "run_next_jobs=true" >> $GITHUB_OUTPUT
             else
               echo "run_next_jobs=false" >> $GITHUB_OUTPUT
             fi
           fi
 
-  update-version-file:
-    needs: check-commit-message
-    if: needs.check-commit-message.outputs.run_next_jobs == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Extract Version from Commit Message
-        run: |
-          VERSION=$(git log -1 --pretty=format:%s | grep -oP '^\d+\.\d+\.\d+')
-          echo $VERSION > quantum_unity/Assets/Resources/version.txt
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add quantum_unity/Assets/Resources/version.txt
-          git commit -m "Update version file to $VERSION"
-          git push
-
   build-dotnet:
-    needs: update-version-file
+    needs: check-commit-message
     if: needs.check-commit-message.outputs.run_next_jobs == 'true'
     name: Build .NET Project on Windows
     runs-on: windows-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Check Commit Message
-        id: check-commit
-        run: |
-          commit_message=$(git log -1 --pretty=%B)
-          echo "Commit message: $commit_message"
-          echo "COMMIT_MESSAGE_STARTS_WITH_NUMBER=false" >> $GITHUB_ENV
-          if [[ $commit_message =~ ^[0-9] ]]; then
-            echo "Commit message starts with a number."
-            echo "COMMIT_MESSAGE_STARTS_WITH_NUMBER=true" >> $GITHUB_ENV
-          fi
-        shell: bash
-
-      - if: env.COMMIT_MESSAGE_STARTS_WITH_NUMBER != 'true'
-        run: |
-          echo "Skipping build as commit message does not start with a number"
-        shell: bash
         
       - name: Build C# Project
         run: dotnet build ./quantum_code/quantum.code/quantum.code.csproj /p:Configuration=Release
@@ -156,6 +121,22 @@ jobs:
           folderId: ${{ secrets.DRIVE_FOLDER_ID }}
           overwrite: true
           
+  update-commit-message:
+    needs: [build-dotnet, buildForAllSupportedPlatforms]
+    if: needs.check-commit-message.outputs.run_next_jobs == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Update Commit Message with Version
+        run: |
+          git fetch --all
+          ORIGINAL_COMMIT=$(git rev-parse HEAD)
+          VERSION=$(cat quantum_unity/Assets/Resources/version.txt)
+          NEW_COMMIT_MESSAGE=$(git log -1 --pretty=%B | sed "s/\[Build\]/$VERSION/")
+          git commit --amend -m "$NEW_COMMIT_MESSAGE"
+          git push origin HEAD:main --force-with-lease=$ORIGINAL_COMMIT
   # sendNotification:
   #   name: Send notification
   #   needs: buildForAllSupportedPlatforms
