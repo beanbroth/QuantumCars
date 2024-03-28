@@ -129,6 +129,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Configure Git
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+
       - name: Update Commit Message with Version
         run: |
           git fetch --all
