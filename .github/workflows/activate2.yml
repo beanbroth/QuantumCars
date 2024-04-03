@@ -27,7 +27,7 @@ jobs:
           else
             commit_message=$(git log -1 --pretty=%B)
             echo "Commit message: $commit_message"
-            if [[ $commit_message =~ "[Build]" ]]; then
+            if [[ $commit_message =~ ^[0-9] ]]; then
               echo "run_next_jobs=true" >> $GITHUB_OUTPUT
             else
               echo "run_next_jobs=false" >> $GITHUB_OUTPUT
@@ -121,27 +121,6 @@ jobs:
           folderId: ${{ secrets.DRIVE_FOLDER_ID }}
           overwrite: true
           
-  update-commit-message:
-    needs: [build-dotnet, buildForAllSupportedPlatforms]
-    if: needs.check-commit-message.outputs.run_next_jobs == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Configure Git
-        run: |
-          git config user.email "action@github.com"
-          git config user.name "GitHub Action"
-
-      - name: Update Commit Message with Version
-        run: |
-          git fetch --all
-          ORIGINAL_COMMIT=$(git rev-parse HEAD)
-          VERSION=$(cat quantum_unity/Assets/Resources/version.txt)
-          NEW_COMMIT_MESSAGE=$(git log -1 --pretty=%B | sed "s/\[Build\]/$VERSION/")
-          git commit --amend -m "$NEW_COMMIT_MESSAGE"
-          git push origin HEAD:main --force-with-lease=$ORIGINAL_COMMIT
   # sendNotification:
   #   name: Send notification
   #   needs: buildForAllSupportedPlatforms
